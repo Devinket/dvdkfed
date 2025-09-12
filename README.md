@@ -36,15 +36,15 @@ Responsive
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-https://www.youtube.com
+https://store.steampowered.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="./readme-images/youtube-homescreen.JPG" width="375px" alt="De homepagina van Youtube">
+  "Welcome to Steam"
+  <img src="./readme-images/steam-homepage.png" width="375px" alt="De homepagina van Steam">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="./readme-images/youtube-videoscreen.JPG" width="375px" alt="De pagina waar je video's kan kijken">
+  "EA Sports FC 25 on Steam"
+  <img src="./readme-images/steam-detailpagina.png" width="375px" alt="De pagina waar je informatie over games kan vinden en kopen">
  
 </details>
 
@@ -57,6 +57,13 @@ https://www.youtube.com
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+Ik heb mijn beeldscherm op zwart gezet (helderheid 0%) en zo een game proberen te sellecteren.
+Hij verteld me dat ik in een navigatie window zit.
+Als ik op tab druk, gaat hij naar de volgende knop. Hij verteld dat ik op een link bevind naar de store. Daarna verteld hij nog andere knoppen die daarnaast zijn. Ik klik enter en ga naar de store pagina. Daar gaat hij alle onrelevante knoppen af en als ik meerdere keren op tab druk ga ik daar sneller doorheen.
+Hierna kom ik mijn eerste game tegen. Hij zegt de naam van de game en daarna een CTA, "Visit now".
+Ik druk weer op tab en ga naar de volgende game. Daar zegt hij dat het een top seller is en dat de game 70 euro kost.
+Als ik op tab blijf drukken dan gaat hij langs alle games, op een manier die ik best fijn vind.
+Ik klik op een game. Hier gaat hij eerst alle menu items af, waarna hij vervolgens naar de informatie van de game gaat. Daarna volgt hij diverse knoppen zoals zet op wishlist of zet in winkelwagen.
 
 </details>
 
@@ -89,7 +96,7 @@ https://www.youtube.com
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Het toevoegen van een video die autoplayed en looped vond ik lastig, hier heb ik veel mee moeten spelen.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
