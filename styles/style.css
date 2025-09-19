@@ -4,9 +4,249 @@
 *, *::after, *::before {
   box-sizing:border-box;  
 }
-/* kijk op dlo naar een bestand remedy.css en plak dat gehele gedeelte hier in
+/* kijk op dlo naar een bestand remedy.css en plak dat gehele gedeelte hier in */
+
+/* @docs
+label: Core Remedies
+version: 0.1.0-beta.2
+
+note: |
+  These remedies are recommended
+  as a starter for any project.
+
+category: file
+*/
 
 
+/* @docs
+label: Box Sizing
+
+note: |
+  Use border-box by default, globally.
+
+category: global
+*/
+*, ::before, ::after { box-sizing: border-box; }
+
+
+/* @docs
+label: Line Sizing
+
+note: |
+  Consistent line-spacing,
+  even when inline elements have different line-heights.
+
+links:
+  - https://drafts.csswg.org/css-inline-3/#line-sizing-property
+
+category: global
+*/
+
+/*
+html { line-sizing: normal; }
+*/
+
+/* @docs
+label: Body Margins
+
+note: |
+  Remove the tiny space around the edge of the page.
+
+category: global
+*/
+body { margin: 0; }
+
+
+/* @docs
+label: Hidden Attribute
+
+note: |
+  Maintain `hidden` behaviour when overriding `display` values.
+
+  category: global
+*/
+[hidden] { display: none; }
+
+
+/* @docs
+label: Heading Sizes
+
+note: |
+  Switch to rem units for headings
+
+category: typography
+*/
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h4 { font-size: 1.00rem; }
+h5 { font-size: 0.83rem; }
+h6 { font-size: 0.67rem; }
+
+
+/* @docs
+label: H1 Margins
+
+note: |
+  Keep h1 margins consistent, even when nested.
+
+category: typography
+*/
+h1 { margin: 0.67em 0; }
+
+
+/* @docs
+label: Pre Wrapping
+
+note: |
+  Overflow by default is bad...
+
+category: typography
+*/
+pre { white-space: pre-wrap; }
+
+
+/* @docs
+label: Horizontal Rule
+
+note: |
+  1. Solid, thin horizontal rules
+  2. Remove Firefox `color: gray`
+  3. Remove default `1px` height, and common `overflow: hidden`
+
+category: typography
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+
+/* @docs
+label: Responsive Embeds
+
+note: |
+  1. Block display is usually what we want
+  2. The `vertical-align` removes strange space-below in case authors overwrite the display value
+  3. Responsive by default
+  4. Audio without `[controls]` remains hidden by default
+
+category: embedded elements
+*/
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  /* vertical-align: middle; */
+  max-width: 100%;
+}
+audio:not([controls]) { display:none; }
+
+
+/* @docs
+label: Responsive Images
+
+note: |
+  These new elements display inline by default,
+  but that's not the expected behavior for either one.
+  This can interfere with proper layout and aspect-ratio handling.
+
+  1. Remove the unnecessary wrapping `picture`, while maintaining contents
+  2. Source elements have nothing to display, so we hide them entirely
+
+category: embedded elements
+*/
+picture { display: contents; }
+source { display: none; }
+
+
+/* @docs
+label: Aspect Ratios
+
+note: |
+  Maintain intrinsic aspect ratios when `max-width` is applied.
+  `iframe`, `embed`, and `object` are also embedded,
+  but have no intrinsic ratio,
+  so their `height` needs to be set explicitly.
+
+category: embedded elements
+*/
+img, svg, video, canvas {
+  height: auto;
+}
+
+
+/* @docs
+label: Audio Width
+
+note: |
+  There is no good reason elements default to 300px,
+  and audio files are unlikely to come with a width attribute.
+
+category: embedded elements
+*/
+audio { width: 100%; }
+
+/* @docs
+label: Image Borders
+
+note: |
+  Remove the border on images inside links in IE 10 and earlier.
+
+category: legacy browsers
+*/
+img { border-style: none; }
+
+
+/* @docs
+label: SVG Overflow
+
+note: |
+  Hide the overflow in IE 10 and earlier.
+
+category: legacy browsers
+*/
+svg { overflow: hidden; }
+
+
+/* @docs
+label: HTML5 Elements
+
+note: |
+  Default block display on HTML5 elements.
+  For oldIE to apply this styling one needs to add some JS as well (i.e. `document.createElement("main")`)
+
+links:
+  - https://www.sitepoint.com/html5-older-browsers-and-the-shiv/
+
+category: legacy browsers
+*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+
+/* @docs
+label: Checkbox & Radio Inputs
+
+note: |
+  1. Add the correct box sizing in IE 10
+  2. Remove the padding in IE 10
+
+category: legacy browsers
+*/
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/*zelf geschreven*/
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
 
 
 
@@ -16,6 +256,10 @@
 :root {
 	--color-text:#c6d4df;
   --background: #1B2838;
+  --light_gray: #e5e5e5;
+  --white: #ffffff;
+  --black: #000000;
+  --header-achtergrond: #161A21;
   /* colors van Steam zelf 
 	--gpSystemLightestGrey: #DCDEDF;
     --gpSystemLighterGrey: #B8BCBF;
@@ -157,7 +401,10 @@ a {
 
 h1 {
   text-transform:uppercase;
-  font-weight: 500;
+  font-weight: 600;
+
+  font-size: 1em;
+  letter-spacing: 1.5px;
 }
 
 
@@ -175,4 +422,288 @@ button.anders {
 
 .anders {
 color: blue;
+}
+
+
+
+.mobiel-nav {
+  position: fixed;
+  width: 100%;
+  margin-top: -2%;
+  height: 65px;
+
+  background-color: var(--header-achtergrond);
+  color: var(--white);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);;
+}
+
+.mobiel-nav img {
+  width: 40px;
+  display: block;
+}
+
+.mobiel-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mobiel-nav ul li:nth-child(1) {
+  position: absolute;
+  left: 2%;
+}
+
+
+/* Cattegorie*/
+@media (max-width:910px) {
+  .mobiel-cattegorie {
+    width: 100%;
+    padding-top: 50px;
+    display: block;
+    margin: 0;
+    padding-inline-start: 15px;
+
+    color: var(--white);
+    background: var(--black);
+    background: linear-gradient(-90deg,rgba(0, 0, 0, 1) 0%, rgba(9, 42, 84, 1) 0%, rgba(60, 100, 144, 1) 100%);
+  }
+
+  .mobiel-cattegorie ul li:first-child a { 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .mobiel-cattegorie img {
+    height: 16px;
+    width: 16px;
+  }
+
+
+  .mobiel-cattegorie form {
+    display: flex;
+
+  }
+
+  .mobiel-cattegorie form input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 911px) {
+  .mobiel-cattegorie {
+    width: 940px;
+    height: 35px;
+
+    position: relative;
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-inline-start: 15px;
+
+    color: var(--light_gray);
+    background: var(--black);
+    background: linear-gradient(-90deg,rgba(0, 0, 0, 1) 0%, rgba(9, 42, 84, 1) 0%, rgba(60, 100, 144, 1) 100%);
+  }
+
+  .mobiel-cattegorie ul li{
+    display: flex;
+    align-items: center;
+
+    padding: 0px 10px 0px 15px;
+    height: 34px;
+  }
+
+  .mobiel-cattegorie form {
+    display: flex;
+    position: absolute;
+    right: 0px;
+  }
+
+  .mobiel-cattegorie form input {
+    width: 100%;
+  }
+
+
+/* past image aan */
+  .mobiel-cattegorie ul li:first-child a { 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .mobiel-cattegorie img {
+    height: 16px;
+    width: 16px;
+  }
+
+  .mobiel-cattegorie ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+}
+
+.mobiel-cattegorie ul {
+  font-size: 13px;
+  line-height: 34px;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  /*font size, line height en text shadow heb ik gekopieerd van de steam website. Ik heb ze gevonden onder .store_nav .tab > span {} */
+}
+
+
+
+
+
+
+.groot-scherm-nav {
+  /* omdat de ul een apart item is, maken we van de nav zelf en van de ul een flexbox. De ul is dan een flexbox in een flexbox*/
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 104px;
+  background: var(--header-achtergrond);
+  justify-content: center;
+}
+
+.groot-scherm-nav div {
+  display: flex;
+  flex-direction: row;
+
+  width: 940px;
+  align-items: center;
+}
+
+.groot-scherm-nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.groot-scherm-nav ul li a{
+  text-transform: uppercase;
+}
+
+.groot-scherm-nav ul:nth-child(2) {
+  align-self: start;
+  position: absolute;
+  right: 90px;
+}
+
+/* pas tekst aan in profiel nav */
+.groot-scherm-nav ul:nth-child(2) li a {
+  text-transform: none;
+}
+
+/* pas notificatie bell en profielfoto aan*/
+.groot-scherm-nav ul:nth-child(2) li:first-child img {
+  height: 14px;
+}
+
+.groot-scherm-nav ul:nth-child(2) li:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 24px;
+  width: 46px;
+  background-color: #5c7e10;
+}
+
+.groot-scherm-nav ul:nth-child(2) li:nth-child(4) img {
+  height: 34px;
+}
+
+
+/* pas logo aan */
+.groot-scherm-nav ul:first-child li:first-child{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  color: var(--white);
+  margin-right: 50px;
+}
+
+
+
+
+.groot-scherm-nav img:first-child {
+  height: 44px;
+}
+
+@media (max-width: 910px) {
+  .groot-scherm-nav {
+    display: none;
+  }
+}
+
+
+
+@media (min-width: 911px) {
+  .mobiel-nav {
+    display: none;
+  }
+}
+
+/* pas wishlist aan */
+
+.wishlist-button {
+  position: absolute;
+  right: 90px;
+
+  background: #7FA9B2;
+  color: var(--white);
+  padding: 2px 30px;
+  border: 1px solid black;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);;
+  font-size: 0.8em;
+}
+
+@media (max-width: 910px) {
+  .wishlist-button {
+    display: none;
+  }
+}
+
+/* hover */
+.mobiel-cattegorie li:hover {
+  background: #092a54;
+  background: linear-gradient(-90deg,rgba(9, 42, 84, 0) 0%, rgba(89, 159, 235, 1) 100%);
+}
+
+.wishlist-button:hover {
+  background: #919191;
+  background: linear-gradient(-90deg,rgba(145, 145, 145, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+  color: var(--black);
+  text-shadow: none;
+}
+
+ header .groot-scherm-nav ul:first-child li a:hover {
+  text
+}
+
+
+
+
+
+
+/* footer */
+
+
+@media (max-width: 910px) {
+  footer{
+    display: none;
+  }
 }

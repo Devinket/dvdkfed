@@ -1,0 +1,100 @@
+.groot-scherm-nav ul:first-child li:nth-child(2) {
+    color: #1a9fff;
+    
+}
+
+
+/* pas side menu aan*/
+@media (max-width: 1200px) {
+    main section:nth-child(2) {
+        display:none;
+    }
+}
+
+/* pas banner aan */
+@media (max-width: 911px) {
+    main section:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (min-width: 910px) {
+
+}
+
+/* featured en recommended */
+
+section:nth-child(4) {
+    background-color: #1B2838;
+
+    display: grid;
+    grid-template-columns: 20px 2fr 20px;
+    grid-template-rows: 40px 2fr;
+}
+
+section:nth-child(4) h2 {
+    font-size: 0.5;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+section:nth-child(4) button {
+    font-size: 0.5;
+
+    align-self: center;
+    height: 30px;
+    width: 50px;
+}
+
+section:nth-child(4) div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1%;
+}
+
+section:nth-child(4) div article {
+    background: #195174;
+    background: linear-gradient(225deg,rgba(25, 81, 116, 1) 0%, rgba(38, 129, 168, 1) 100%);
+}
+
+
+section:nth-child(4) div article:nth-child(3) {
+    color: black;
+    background: lightblue;
+}
+
+section:nth-child(4) div article:nth-child(4) {
+    color: black;
+    background: lightblue;
+}
+
+section:nth-child(4) div article img {
+    width: 100%;
+}
+
+section:nth-child(4) div article:first-child {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section:nth-child(4) div article:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+
+.discount-box {
+    display: grid;
+    grid-template-columns: 50% 30%;
+    grid-template-rows: 30px 30px;
+}
+
+.discount-box p:first-child {
+    color: #BEEE11;
+    background: #4C6B22;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
