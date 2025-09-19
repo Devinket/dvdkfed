@@ -134,6 +134,10 @@ Ik heb ook beetje gespeeld met javascript alvast. Dit was wel heel lastig, omdat
 Ik heb de hele week een header volledig responsive proberen te maken. Dit is gelukt. Het was een hoop spelen en testen en nam de hele week in beslag. Op vrijdag kon ik eindelijk aan de css van de rest van mijn website. Voor het feedback moment heb ik een responsive grid weten te maken voor de section "Discount en Events". De nav heb ik alleen maar met flexbox gedaan, dus wil ik ook laten zien dat ik met grid kan werken.
 Op moment van schrijven heb ik geen vertrouwen dat ik beide pagina's af krijg, omdat het zoveel werk kost. Ik heb nog een week, waarin ik eigenlijk elke dag de hele dag moet gaan besteden aan beide pagina's. Ik verwacht niet dat ik het af ga krijgen en vind het helaas een onrealistisch doel om twee pagina's in 4 weken af te krijgen terwijl je nog van alles moet leren over grid.
 
+Ik heb nu 3 css bestanden. op moment van schrijven heb ik precies 800 regels css geschreven, als je lege regels mee telt.
+<img src="/readme-images/code-css1.PNG">
+<img src="/readme-images/code-css2.PNG">
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
