@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 	
 <head>
 	<meta charset="UTF-8">
@@ -9,56 +9,155 @@
 	<title>Welcome to Steam</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/homepagina.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
 <body>
 
 	<header>
-		<nav>
-			<img src="./images/header_logo.png">
-			<h1 alt="Steam homepagina">Steam</h1>
-			<ul>
-				
-				<li>Store</li>
-				<li>Community</li>
-				<li>Devinket</li>
-				<li>Chat</li>
-				<li>Support</li>
+		<!-- nav voor groot scherm-->
+		<nav class="groot-scherm-nav">
+			<div>
+				<ul>
+					<li>
+						<img src="./images/header_logo.png">
+						<h1 alt="Steam homepagina">Steam</h1>
+					</li>
+					<li><a href="dummy-page.html" alt="Store, de pagina waar je nu op zit">Store</a></li>
+					<li><a href="dummy-page.html" alt="Community pagina">Community</a></li>
+					<li><a href="dummy-page.html" alt="Jouw profiel, Devinket">Devinket</a></li>
+					<li><a href="dummy-page.html" alt="Chat met spelers">Chat</a></li>
+					<li><a href="dummy-page.html" alt="Support, voor als je ergens hulp bij nodig hebt">Support</a></li>
+				</ul>
+				<ul>
+					<li><a href="dummy-page.html" alt="Knop notificaties"><img src="./images/notification_bell.png" alt="Icoon van een notificatiebel"></a></li>
+					<li><a href="dummy-page.html" alt="klik om naar jouw profiel te gaan">Devinket</a></li>
+					<li><a href="dummy-page.html" alt="Je hebt 0 euro in je portomonee">0,--€</a></li>
+					<li><a href="dummy-page.html" alt="Jouw profielfoto, ga naar jouw profiel."><img src="./images/user-profile.jpg" alt="Profielfoto van jou"> </a></li>
+				</ul>
+			</div>
+		</nav>
 
-				<li>Devinket</li>
-				<li>0,--€</li>
-				<li><img src="./images/user-profile.jpg" alt="Profielfoto van jou"> </li>
-				<li>Notifications</li>
+		<!-- nav voor klein scherm-->
+		 <nav class="mobiel-nav">
+			<ul>
+				<li><img src="./images/header_menu_hamburger.png" alt="Hamburger menu die verwijst naar verschillende belangrijke pagina's"></li>
+				<li>
+					<img src="./images/header_logo.png">
+				</li>
+				<li>
+					<h1 alt="Steam homepagina">Steam</h1>
+				</li>
+			</ul>
+		
+		</nav>
+		
+		<a class="wishlist-button" href="dummy-page.html" alt="Ga naar jouw wishlist">wishlist</a>
+
+		<nav class="mobiel-cattegorie">
+			<ul>
+				<li>
+					<a href="dummy-page.html" alt=" Ga naar de Store pagina">
+						<img src="./images/user-profile.jpg" alt="Jouw profielfoto">
+									Your Store
+					</a>
+				</li>
+
+				<li><a href="dummy-page.html" alt="Zoek naar nieuwe en waardige games om te spelen"><p>New & Noteworthy</p></a></li>
+				<li><a href="dummy-page.html" alt="Zoek naar verschillende categorieen">Categories</a></li>
+				<li><a href="dummy-page.html" alt="Koop punten">Points Shop</a></li>
+				<li><a href="dummy-page.html" alt="Ga naar het nieuws">News</a></li>
+				<li><a href="dummy-page.html" alt="Ga naar 'labs'">Labs</a></li>
+				<li>
+					<form role="search" action="#">
+						<input type="search" name="search" id="search" placeholder="Search" autocomplete="off" aria-label="zoeken">
+						<button type="submit"><img src="./images/search_icon_btn.png" alt="Zoeken icoon"></button>
+					</form>
+							<!-- Wat in <form> staat heb ik gekopieerd en aangepast van de opdracht FED 25/26 - Flexbox - Oefening 2-->
+				</li>
 			</ul>
 		</nav>
+
+
 	</header>
 
 	<main>
-		<button>wishlist</button>
-		<nav>
-			<ul>
-				<li><button>Your Store</button></li>
-				<li>New & Noteworthy</li>
-				<li>Categories</li>
-				<li>Points Shop</li>
-				<li>News</li>
-			</ul>
-		</nav>
-		
-		<a href="dummy-page.html">
-			<video autoplay muted loop>
-				<source src="./media/mp4_page_bg_english.mp4" type="video/mp4">
-				<source src="./media/webm_page_bg_english.webm" type="video/webm">
-				Your browser does not support the video tag.
-			</video>
-		</a>
 
-		<h2>Featured & Recommended</h2>
+		<section>
+			<a href="productpagina-wot.html">
+				<video autoplay muted loop>
+					<source src="./media/mp4_page_bg_english.mp4" type="video/mp4">
+					<source src="./media/webm_page_bg_english.webm" type="video/webm">
+					Your browser does not support the video tag.
+				</video>
+			</a>
+		</section>
+
+
+		<section>
+			<article>
+				<img src="./images/steamdeck_promo.png" alt="Foto van een Steamdeck console">
+				<h2>Steam Deck</h2>
+				<p>Your SteamDeck everywhere</p>
+			</article>
+
+			<article>
+				<img src="./images/steamcards_promo_03.png" alt="Foto van promotie Steam gift cards">
+				<h2>Steam Gift Cards</h2>
+				<p>Your games, everywhere</p>
+			</article>
+
+			<article>
+				<h3>Recently viewed</h3>
+				<ul>
+					<li>Hollow Knight</li></li>
+					<li>Assassins Creed: Odyssey</li></li>
+					<li><a href="dummy-page.html">Assetto Corsa</a></li>
+					<li><a href="dummy-page.html">F1 25</a></li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>Your tags</h3>
+				<ul>
+					<li><a href="dummy-page.html">Assassin</a></li>
+					<li><a href="dummy-page.html">Racing</a></li>
+					<li><a href="dummy-page.html">Hystorical</a></li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>Recommended</h3>
+				<ul>
+					<li><a href="dummy-page.html">By friends</a></li>
+					<li><a href="dummy-page.html">By Curators</a></li>
+					<li><a href="dummy-page.html">Tags</a></li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>Browse Categories</h3>
+				<ul>
+					<li><a href="dummy-page.html">Top Sellers</a></li>
+					<li><a href="dummy-page.html">New Releases</a></li>
+					<li><a href="dummy-page.html">Upcomming</li>
+					<li><a href="dummy-page.html">Specials</a></li>
+					<li><a href="dummy-page.html">VR Titles</a></li>
+					<li><a href="dummy-page.html">Controller-Friendly</a></li>
+					<li><a href="dummy-page.html">Great on Deck</a></li>
+				</ul>
+			</article>
+		</section>
+
+
+		<section>
+			<h2>Featured & Recommended</h2>
+			<button><</button>
 			<article>
 				<a href="dummy-page.html">
 					<img src="./images/product-images/featured-hollow_knight_1.jpg">
-					
+						
 					<h3>Hollow Knight: Silksong</h3>
 					<h4>Now Available</h4>
 					<p>Top Seller</p>
@@ -73,8 +172,9 @@
 				<img src="./images/product-images/featured-hollow_knight_4.jpg">
 				<img src="./images/product-images/featured-hollow_knight_5.jpg">
 			</article>
+			<button>></button>
 
-			extra content indien nodig
+			
 			<article>
 				<a href="dummy-page.html">
 					<img src="./images/product-images/featured-forza_motorsport_1.jpg">
@@ -117,52 +217,60 @@
 					<img src="./images/icon_platform_win.png" alt="Te spelen met Windows">
 				</a>
 			</article>
+		</section>
 
+		<section>
+			<h2>Discount & Events</h2>
+			<button><a href="dummy-page.html">Browse More</a></button>
+			<button><</button>
+			<div>
+				<article>
+					<a href="dummy-page.html">
+						<img src="./images/product-images/discount-undertale.jpg" alt="Undertale">
+						<h3>Midweek Deal</h3>
+						<p>Offer ends 20 Sep @ 7:00pm.</p>
+						<div class="discount-box">
+							<p>75%</p>
+							<p>9,99€</p>
+							<p>2,49€</p>
+						</div>
+					</a>
+				</article>
 
-		<h2>Discount & Events</h2>
-		<button><a href="dummy-page.html">Browse More</a></button>
+				<article>
+					<a href="dummy-page.html">
+						<img src="./images/product-images/discount-chained_together.png" alt="Chained Together">
+						<h3>Midweek Deal</h3>
+						<p>Offer ends 15 Sep @ 7:00pm.</p>
+						<div class="discount-box">
+							<p>20%</p>
+							<p>4,99€</p>
+							<p>3,99€</p>
+						</div>
+					</a>
+				</article>
 
-			<article>
-				<a href="dummy-page.html">
-					<img src="./images/product-images/discount-undertale.jpg" alt="Undertale">
-					<h3>Midweek Deal</h3>
-					<p>Offer ends 20 Sep @ 7:00pm.</p>
-					<p>75%</p>
-					<p>9,99€</p>
-					<p>2,49€</p>
-				</a>
-			</article>
+				<article>
+					<a href="dummy-page.html">
+						<img src="./images/product-images/discount_kalypso.jpg" alt="Kalypso">
+						<h3>Today's deal!</h3>
+						<p>Up to -90%</p>
+					</a>
+				</article>
 
-			<article>
-				<a href="dummy-page.html">
-					<img src="./images/product-images/discount-chained_together.png" alt="Chained Together">
-					<h3>Midweek Deal</h3>
-					<p>Offer ends 15 Sep @ 7:00pm.</p>
-					<p>20%</p>
-					<p>4,99€</p>
-					<p>3,99€</p>
-				</a>
-			</article>
-
-			<article>
-				<a href="dummy-page.html">
-					<img src="./images/product-images/discount_kalypso.jpg" alt="Kalypso">
-					<h3>Today's deal!</h3>
-					<p>Up to -90%</p>
-				</a>
-			</article>
-
-			<article>
-				<a href="dummy-page.html">
-					<img src="./images/product-images/discount-project_highrise.jpg" alt="Project Highrise">
-					<h3>Today's deal!</h3>
-
-					<p>80%</p>
-					<p>19,50€</p>
-					<p>3,90€</p>
-				</a>
-			</article>
-
+				<article>
+					<a href="dummy-page.html">
+						<img src="./images/product-images/discount-project_highrise.jpg" alt="Project Highrise">
+						<h3>Today's deal!</h3>
+						<div class="discount-box">
+						<p>80%</p>
+						<p>19,50€</p>
+						<p>3,90€</p>
+						</div>
+					</a>
+				</article>
+			</div>
+			<button>></button>
 	<!-- extra content indien nodig (klap uit)
 			<article>
 				<a href="dummy-page.html">
@@ -208,8 +316,10 @@
 				</a>
 			</article>
 		-->
+		</section>
 		
-		<h2>Browse by category</h2>
+		<section>
+			<h2>Browse by category</h2>
 			<article>
 				<a href="dummy-page.html">	<img src="images/product-images/category-action.webp" alt="Action">		<p>Action</p> 	</a>
 			</article>
@@ -229,12 +339,14 @@
 			<article>
 				<a href="dummy-page.html">	<img src="images/product-images/category-survival.webp" alt="Survival">	<p>Survival</p> </a>
 			</article>
-		
-		<section>
-			<img src="./images/decklogo.png">
-			<h2>Top played on Steam Deck</h2>
-			<button><a href="dummy-page.html">See more</a></button>
 		</section>
+
+		<section>
+			<div>
+				<img src="./images/decklogo.png">
+				<h2>Top played on Steam Deck</h2>
+			</div>
+			<button><a href="dummy-page.html">See more</a></button>
 
 			<article>
 				<a href="dummy-page.html">
@@ -296,15 +408,18 @@
 			</article>
 		-->
 
-		<a href="dummy-page.html">
-			<video autoplay muted loop>
-				<source src="./media/deck_banner_animated_mp4_english.mp4" type="video/mp4">
-				<source src="./media/deck_banner_animated_webm_english.webm" type="video/webm">
-				Your browser does not support the video tag.
-			</video>
-		</a>
+		
+			<a href="dummy-page.html">
+				<video autoplay muted loop>
+					<source src="./media/deck_banner_animated_mp4_english.mp4" type="video/mp4">
+					<source src="./media/deck_banner_animated_webm_english.webm" type="video/webm">
+					Your browser does not support the video tag.
+				</video>
+			</a>
+		</section>
 
-		<h2>Because you played Assetto Corsa</h2>
+		<section>
+			<h2>Because you played Assetto Corsa</h2>
 			<article>
 				<img src="images/product-images/you_played-forza_motorsport.jpg" alt="Forza Motorsport">
 				<p>69,99€</p>
@@ -348,68 +463,87 @@
 				<p>Driving</p>
 				<p>VR</p>
 			</article>
-
+		</section>
 <!-- stukje code dat mn nieuwe kitten heeft geschreven
 []'/∂º–--]=[8UJKHN0-P]
 		-->
+		
+		<section>
+			<div>
+				<h2>Your Discovery Queue</h2>
+				<p>Explore your queue</p>
+				<button>Learn more</button>
+				<img src="./images/product-images/discovery-1.jpg" alt="Foto van het spel 'Schedule 1'">
+				<img src="./images/product-images/discovery-2.jpg">
+				<img src="./images/product-images/discovery-3.jpg" alt="Foto van het spel 'Firefighting Simulator'">
+				<img>
+				<p>click here to begin exploring your queue</p>
+			</div>
+		</section>
 
-			<h2>Your Discovery Queue</h2>
-			<p>Explore your queue</p>
-			<button>Learn more</button>
-
+		<section>
 			<h2>Browse Steam</h2>
-				<button><a href="dummy-page.html">New Releases</a></button>
-				<button><a href="dummy-page.html">Specials</a></button>
-				<button><a href="dummy-page.html">Free Games</a></button>
-				<button><a href="dummy-page.html">By User Tags</a></button>
+			<button><a href="dummy-page.html">New Releases</a></button>
+			<button><a href="dummy-page.html">Specials</a></button>
+			<button><a href="dummy-page.html">Free Games</a></button>
+			<button><a href="dummy-page.html">By User Tags</a></button>
+		</section>
 
+		<section>
 			<h2>The Community Recommends</h2>
-			<p>This games today</p>
-			<button>Customize, explore by tag & more</button>
-			<img src="./images/product-images/community-road_to_empress.jpg" alt="Road to Empress">
-			<p>"I wasn't sure what to expect, but I watch an unhealthy amount of Asian Dramas, so why wouldn't I grab this and give it a go especially at that price point? I died on the first set of options. ..."</p>
-			<button>Read Entire Review</button>
-			<img src="./images/product-images/community_profile-Cyberbat.jpg" alt="Profielfoto van Cyberbat">
-			<p>Cyberbat</p>
-			<p>Played 9.4 hrs at review time</p>
-			<p>5 people found this review helpful</p>
+			<article>
+				<p>This games today</p>
+				<button>Customize, explore by tag & more</button>
+				<img src="./images/product-images/community-road_to_empress.jpg" alt="Road to Empress">
+				<p>"I wasn't sure what to expect, but I watch an unhealthy amount of Asian Dramas, so why wouldn't I grab this and give it a go especially at that price point? I died on the first set of options. ..."</p>
+				<button>Read Entire Review</button>
+				<img src="./images/product-images/community_profile-Cyberbat.jpg" alt="Profielfoto van Cyberbat">
+				<p>Cyberbat</p>
+				<p>Played 9.4 hrs at review time</p>
+				<p>5 people found this review helpful</p>
+			</article>
+		</section>
 
 
-			<nav>
-				<ul>
-					<li>New $ Trending</li>
-					<li>Top Sellers</li>
-					<li>Popular Upcomming</li>
-					<li>Specials</li>
-					<li>Trending Free</li>
-				</ul>
-			</nav>
-
-
+		<nav>
+			<ul>
+				<li><button>New & Trending</button></li>
+				<li><button>Top Sellers</button></li>
+				<li><button>Popular Upcomming</button></li>
+				<li><button>Specials</button></li>
+				<li><button>Trending Free</button></li>
+			</ul>
+		</nav>
 
 	</main>
 
 	<footer>
-		<img src="./images/logo_valve_footer.png" alt="Valve">
-		<p>© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
-			VAT included in all prices where applicable.  </p>
-		<a href="dummy-page.html">Privacy Policy</a>
-		<a href="dummy-page.html">Legal</a>
-		<a href="dummy-page.html">Steam Subscriber Agreement</a>
-		<a href="dummy-page.html">Refunds</a>
-		<a href="dummy-page.html">Cookies</a>
+		<section>
+			<img src="./images/logo_valve_footer.png" alt="Valve">
+			<p>© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+			<p>VAT included in all prices where applicable.</p>
+			<ul>
+				<li><a href="dummy-page.html">Privacy Policy</a></li>
+				<li><a href="dummy-page.html">Legal</a></li>
+				<li><a href="dummy-page.html">Steam Subscriber Agreement</a></li>
+				<li><a href="dummy-page.html">Refunds</a></li>
+				<li><a href="dummy-page.html">Cookies</a></li>
+			</ul>
+			<img src="images/logo_steam_footer.png" alt="Steam">
+		</section>
 
-		<img src="images/logo_steam_footer.png" alt="Steam">
+		<ul>
+			<li><a href="dummy-page.html">About Valve</a></li>
+			<li><a href="dummy-page.html">Jobs</a></li>
+			<li><a href="dummy-page.html">Steamworks</a></li>
+			<li><a href="dummy-page.html">Steam Distribution</a></li>
 
-		<a href="dummy-page.html">About Valve</a>
-		<a href="dummy-page.html">Jobs</a>
-		<a href="dummy-page.html">Steamworks</a>
-		<a href="dummy-page.html">Steam Distribution</a>
-		<a href="dummy-page.html">Support</a>
-		<a href="dummy-page.html">Gift Cards</a>
-		<a href="dummy-page.html"><img src="./images/ico_facebook.png"></a>
-		<a href="dummy-page.html"><img src="./images/ico_twitter.png"></a>
-		<a href="dummy-page.html"><img src="./images/ico_bsky.png"></a>
+			<li><a href="dummy-page.html">Support</a></li>
+			<li><a href="dummy-page.html">Gift Cards</a></li>
+			<li><a href="dummy-page.html"><img src="./images/ico_facebook.png"></a></li>
+			<li><a href="dummy-page.html"><img src="./images/ico_twitter.png"></a></li>
+			<li><a href="dummy-page.html"><img src="./images/ico_bsky.png"></a></li>
+		</ul>
 
 	</footer>
 
