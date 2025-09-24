@@ -81,6 +81,7 @@ main > section:nth-child(2) article {
 @media (max-width: 911px) {
     main section:nth-child(1) {
         display: none;
+        background: var(--featuredBackground);
     }
 }
 
