@@ -4,11 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dummy Pagina</title>
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Hier is geen content</h1>
-    <p>Dit is de pagina waar je op komt als je op een knop klikt die verwijst naar een andere pagina, die ik niet heb uitgewerkt.</p>
-    <p>Ik bedoel, de opdracht is niet om de gehele steam website uit te werken (gelukkig).</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Um1aJEfgze0?si=68NC1ulJzoMo_gWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <header>
+        <!-- nav voor groot scherm-->
+        <nav class="groot-scherm-nav">
+            <div>
+                <ul>
+                    <li>
+                        <a href="index.html"><img src="./images/header_logo.png"></a>
+                        <a href="index.html"><h1 alt="Steam homepagina">Steam</h1></a>
+                    </li>
+                    <li><a href="index.html" alt="Store, de pagina waar je nu op zit">Store</a></li>
+                    <li><a href="dummy-page.html" alt="Community pagina">Community</a></li>
+                    <li><a href="dummy-page.html" alt="Jouw profiel, Devinket">Devinket</a></li>
+                    <li><a href="dummy-page.html" alt="Chat met spelers">Chat</a></li>
+                    <li><a href="dummy-page.html" alt="Support, voor als je ergens hulp bij nodig hebt">Support</a></li>
+                </ul>
+                <ul>
+                    <li><a href="dummy-page.html" alt="Knop notificaties"><img src="./images/notification_bell.png" alt="Icoon van een notificatiebel"></a></li>
+                    <li><a href="dummy-page.html" alt="klik om naar jouw profiel te gaan">Devinket</a></li>
+                    <li><a href="dummy-page.html" alt="Je hebt 0 euro in je portomonee">0,--€</a></li>
+                    <li><a href="dummy-page.html" alt="Jouw profielfoto, ga naar jouw profiel."><img src="./images/user-profile.jpg" alt="Profielfoto van jou"> </a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- nav voor klein scherm-->
+         <nav class="mobiel-nav">
+            <ul>
+                <li><img src="./images/header_menu_hamburger.png" alt="Hamburger menu die verwijst naar verschillende belangrijke pagina's"></li>
+                <li>
+                    <img src="./images/header_logo.png">
+                </li>
+                <li>
+                    <h1 alt="Steam homepagina">Steam</h1>
+                </li>
+            </ul>
+        
+        </nav>
+        
+        <a class="wishlist-button" href="dummy-page.html" alt="Ga naar jouw wishlist">wishlist</a>
+        
+        <nav class="mobiel-cattegorie">
+            <ul>
+                <li>
+                    <a href="dummy-page.html" alt=" Ga naar de Store pagina">
+                        <img src="./images/user-profile.jpg" alt="Jouw profielfoto">
+                                    Your Store
+                    </a>
+                </li>
+        
+                <li><a href="dummy-page.html" alt="Zoek naar nieuwe en waardige games om te spelen"><p>New & Noteworthy</p></a></li>
+                <li><a href="dummy-page.html" alt="Zoek naar verschillende categorieen">Categories</a></li>
+                <li><a href="dummy-page.html" alt="Koop punten">Points Shop</a></li>
+                <li><a href="dummy-page.html" alt="Ga naar het nieuws">News</a></li>
+                <li><a href="dummy-page.html" alt="Ga naar 'labs'">Labs</a></li>
+                <li>
+                    <form role="search" action="#">
+                        <input type="search" name="search" id="search" placeholder="Search" autocomplete="off" aria-label="zoeken">
+                        <button type="submit"><img src="./images/search_icon_btn.png" alt="Zoeken icoon"></button>
+                    </form>
+                            <!-- Wat in <form> staat heb ik gekopieerd en aangepast van de opdracht FED 25/26 - Flexbox - Oefening 2-->
+                </li>
+            </ul>
+        </nav>
+        
+        
+
+    <main>
+        <h1>Hier is geen content</h1>
+        <p>Dit is de pagina waar je op komt als je op een knop klikt die verwijst naar een andere pagina, die ik niet heb uitgewerkt.</p>
+        <p>Ik bedoel, de opdracht is niet om de gehele steam website uit te werken (gelukkig).</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Um1aJEfgze0?si=68NC1ulJzoMo_gWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
+
+    <footer>
+		<div>
+			<!--deze rare div voegt een balkje toe-->
+			<div class="rule"></div>
+			<section>
+				<img src="./images/logo_valve_footer.png" alt="Valve">
+				<div>
+					<p>© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+					<p>VAT included in all prices where applicable.</p>
+					<ul>
+						<li><a href="dummy-page.html">Privacy Policy</a></li>
+						<li><a href="dummy-page.html">Legal</a></li>
+						<li><a href="dummy-page.html">Steam Subscriber Agreement</a></li>
+						<li><a href="dummy-page.html">Refunds</a></li>
+						<li><a href="dummy-page.html">Cookies</a></li>
+					</ul>
+				</div>
+				<img src="images/logo_steam_footer.png" alt="Steam">
+			</section>
+
+			<div class="rule"></div>
+
+			<ul>
+				<li><a href="dummy-page.html">About Valve</a></li>
+				<li><a href="dummy-page.html">Jobs</a></li>
+				<li><a href="dummy-page.html">Steamworks</a></li>
+				<li><a href="dummy-page.html">Steam Distribution</a></li>
+
+				<li><a href="dummy-page.html">Support</a></li>
+				<li><a href="dummy-page.html">Gift Cards</a></li>
+				<li><a href="dummy-page.html"><img src="./images/ico_facebook.png"></a></li>
+				<li><a href="dummy-page.html"><img src="./images/ico_twitter.png"></a></li>
+				<li><a href="dummy-page.html"><img src="./images/ico_bsky.png"></a></li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
