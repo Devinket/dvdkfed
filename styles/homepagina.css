@@ -1,15 +1,81 @@
+:root {
+    --sellectorblauw: #1a9fff;
+    --white: #ffffff;
+    --featuredBackground: #0B151F;
+    --menuItem: linear-gradient(90deg, rgba(27, 40, 56, 1) 0%, rgba(40, 59, 84, 1) 100%);
+    --buttonStateGradient: linear-gradient(90deg, rgba(17, 42, 74, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    --buttonHoverGradient: linear-gradient(90deg, rgba(82, 132, 199, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    --kortingTekstGroen: #BEEE11;
+    --kortingAchtergrondGroen: #4C6B22;
+    --kortingTekstGrijs: #647784;
+    --kortingBackgroundGrijs: #344654;
+
+    --kopjeBlauw: #3883cf73;
+    --textBlauw: #3ecdea;
+
+    --background: #1B2838;
+    --backgroundNewTreding: #2B475E;
+}
+
+
 .groot-scherm-nav ul:first-child li:nth-child(2) {
-    color: #1a9fff;
+    color: var(--sellectorblauw);
     
 }
 
 
-/* pas side menu aan*/
-@media (max-width: 1200px) {
+/* pas side menu aan en haalt m weg wanneer scherm niet breed genoeg is*/
+@media (max-width: 1350px) {
     main section:nth-child(2) {
         display:none;
     }
 }
+
+/* haalt menu tevoorschijn*/
+@media (min-width: 1351px) {
+    main {
+        display: grid;
+        grid-template-columns: 250px 1fr 250px;
+        grid-template-rows: auto; 
+      }
+      
+      main > section:nth-child(1) {
+        grid-column: 1 / -1; 
+      }
+      
+      main > section:nth-child(2) {
+        grid-column: 1;
+        grid-row: span 9;
+      }
+      
+      main > section:nth-child(n+3) {
+        grid-column: 2;  
+        margin-bottom: 1rem;
+      }
+}
+
+
+/* vormgeving in de menu */
+main > section:nth-child(2) article:nth-child(3) {
+    background: #1B2838;
+    background: var(--menuItem);
+}
+
+main > section:nth-child(2) {
+    max-width: 250px;
+    flex-direction: row;
+}
+main > section:nth-child(2) a:hover {
+    color: var(--white);
+}
+
+main > section:nth-child(2) article {
+    padding: 1rem;
+}
+
+
+
+
 
 /* pas banner aan */
 @media (max-width: 911px) {
@@ -18,46 +84,231 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* featured and recommended */
 @media (min-width: 910px) {
+
+    main section:nth-child(3) {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto; 
+
+        max-height: 600px;
+        max-width: 100%;
+        align-items: start;
+    }
+
+    main section:nth-child(3) h2 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+
+
+
+    main section:nth-child(3) article{
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto; 
+
+
+        background: var(--featuredBackground);
+    }
+
+    main section:nth-child(3) article > * {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+
+    main > section:nth-child(3) article a:nth-child(1) {
+        grid-column: 1;   
+        grid-row: span 3;
+        padding: 0%;
+    }
+    
+    
+    main section:nth-child(3) article:nth-child(n+2) {
+        grid-column: 2;  
+    }
+
+
+
+
+    main section:nth-child(3) article > div {
+        display: grid;
+
+        grid-template-columns: auto auto;
+    }
+
+    main section:nth-child(3) article a:nth-of-type(3) div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    }
+
+    main section:nth-child(3) article > div img:nth-of-type(n+1) {
+        width: 150px;
+    }
+
+    /* effe de rest weg */
+    main section:nth-child(3) article:nth-of-type(2){
+        display: none;
+    }
+
+    main section:nth-child(3) article:nth-of-type(3){
+        display: none;
+    }
 
 }
 
-/* featured en recommended */
 
-section:nth-child(4) {
-    background-color: #1B2838;
-
+@media (max-width: 911px) {
+main section:nth-child(3) {
     display: grid;
-    grid-template-columns: 20px 2fr 20px;
-    grid-template-rows: 40px 2fr;
+
+    grid-template-columns: 80% 80% 80%;
+    grid-template-rows: auto; 
+    gap: 1%;
+}
+
+main section:nth-child(3) h2 {
+    grid-column: 1 / -1; /* spans all columns */
+    grid-row: 1;
+}
+
+
+
+main section:nth-child(3) article {
+    background: var(--featuredBackground);
+    width: 100%;
+}
+
+
+main section:nth-child(3) article a:first-of-type img {
+    width: 100%;
+}
+
+
+main section:nth-child(3) article > div {
+    display: none;
+}
+
+main section:nth-child(3) article a:nth-of-type(3) div {
+    display: none;
+}
+
+main section:nth-child(3) button {
+    display: none;
+}
+
+main section:nth-child(3) article a:nth-of-type(3) img {
+    display: none;
+}
+
+}
+
+
+
+
+
+
+
+/* discount en events */
+
+/* deze maakt de grid over de gehele discount en events */
+section:nth-child(4) {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 40px 1fr;
+    min-width: 800px;
+}
+
+@media (max-width: 800px) {
+    section:nth-child(4) > button{
+        display: none;
+    }
+
+    section:nth-child(4) > div{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
 }
 
 section:nth-child(4) h2 {
-    font-size: 0.5;
-
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-section:nth-child(4) button {
+
+
+
+
+
+
+/* buttons aanpassen */
+.productbutton {
+    align-self: center;
+    justify-self: center;
+    height: 40px;
+    width: 40px;
+
+    font-size: 16px;
+    transform: scaleY(3); 
+
+    border: none; 
+    background: #112a4a;
+    background: var(--buttonStateGradient);
+    color: var(--white);
+}
+
+.productbutton:hover {
+    background: #5284c7;
+    background: var(--buttonHoverGradient);   
+}
+
+
+
+
+section:nth-child(4) > a {
     font-size: 0.5;
 
     align-self: center;
     height: 30px;
-    width: 50px;
+    width: 60px;
+    border: 2px var(--white);
 }
 
-section:nth-child(4) div {
+
+section:nth-child(4) > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1%;
 }
 
+
+
+
 section:nth-child(4) div article {
     background: #195174;
     background: linear-gradient(225deg,rgba(25, 81, 116, 1) 0%, rgba(38, 129, 168, 1) 100%);
 }
+
 
 
 section:nth-child(4) div article:nth-child(3) {
@@ -86,15 +337,708 @@ section:nth-child(4) div article:nth-child(2) {
 
 
 
+
+/* probeersel 1, deze lukte net niet
 .discount-box {
     display: grid;
-    grid-template-columns: 50% 30%;
-    grid-template-rows: 30px 30px;
+    grid-template-columns:auto 1fr;
+    grid-template-rows:auto auto;
+    align-items:center;
+    gap:4px;
+
+
+    width: max-content;
+    right: 12px;
+    bottom: 12px;
+
+}
+
+.discount-box p{
+    margin: 0;
+    line-height: 1;
 }
 
 .discount-box p:first-child {
+    grid-row:1 / span 2;
+    grid-column:1;
     color: #BEEE11;
     background: #4C6B22;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    border-radius:2px;
+    padding: 6px 10px;
+
+    zorgt dat de tekst in het midden is
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.discount-box p:nth-child(2) {
+    text-decoration-line: line-through;
+    background: #344654;
+    color: #647784;
+
+    grid-column:2;
+    grid-row:1;
+    justify-self:end;
+}
+
+.discount-box p:nth-child(3) {
+    grid-column:2;
+    grid-row:2;
+    justify-self:end;
+
+    font-size:1.25rem;
+    background: #344654;
+    color: #BEEE11;
+}
+
+*/
+
+
+
+/* Vormgeving voor discount en events*/
+.discount-box {
+    display: grid;
+    grid-template-columns:auto 1fr;
+    grid-template-rows:auto auto;
+    width: max-content;
+}
+
+.discount-box p {
+    align-self: center;
+    margin: 0;
+    padding: 6px;
+    width: max-content;
+}
+
+.discount-box p:first-child {
+    grid-row:1 / span 2;
+    grid-column:1; 
+
+    color: var(--kortingTekstGroen);
+    background: var(--kortingAchtergrondGroen);
+    height: 100%;
+    font-weight: 600;
+    font-size: 1.8em;
+
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.discount-box p:nth-child(2) {
+    text-decoration-line: line-through;
+    background: var(--kortingBackgroundGrijs);
+    color: var(--kortingTekstGrijs);
+    justify-self: end;
+
+    display: flex;
+    z-index: 0;
+}
+
+.discount-box p:nth-child(3) {
+    background: var(--kortingBackgroundGrijs);
+    color: var(--kortingTekstGroen);
+    justify-self: end;
+    padding-left: 50%;
+
+    display: flex;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Browse by Cattegory */
+section:nth-child(5) {
+ display: grid;
+
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 50px 1fr;
+
+ gap: 20px;
+
+ min-width: 800px;
+}
+
+@media (max-width: 911px) {
+    section:nth-child(5) {
+        gap: 10px;
+    }
+}
+
+section:nth-child(5) h2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+/* tekst in het midden zetten */
+section:nth-child(5) article {
+    position: relative;   /* nodig voor absolute positionering van de tekst */
+    overflow: hidden;
+}
+
+section:nth-child(5) article p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* zet de tekst in het midden */
+    font-size: 1.3em;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+
+    z-index: 2;
+}
+
+section:nth-child(5) article img {
+    display: block;
+    width: 100%;
+    z-index: 0;
+}
+
+
+/* maakt de blauwe sellectie transitie */
+section:nth-child(5) article::after {
+    content: '';
+    background: #008cff;
+    background: linear-gradient(0deg, rgba(0, 140, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transition: 150ms ease-in-out;
+    z-index: 1;
+}
+
+section:nth-child(5) article:hover::after {
+    height: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* top played on steam deck */
+
+/* deze past tekst aan */
+section:nth-child(6) > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+
+    grid-column:1 / span 2;
+    grid-row:1; 
+}
+
+section:nth-child(6) > div:first-child img {
+    height: 1.5em;
+    margin-right: 0.5em;
+}
+
+
+
+
+
+section:nth-child(6) {
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 50px 1fr;
+
+    min-width: 800px;
+}
+
+section:nth-of-type(6) > div:nth-of-type(2) {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+section:nth-of-type(6) > div:nth-of-type(2) article {
+    background-color: #313E4D;
+}
+
+section:nth-of-type(6) > div:nth-of-type(2) article:hover {
+    background: #708094;
+    background: radial-gradient(circle, rgba(112, 128, 148, 1) 0%, rgba(52, 64, 79, 1) 100%);
+}
+
+
+
+/* poging om video te centeren
+section:nth-of-type(7) a {
+    display: flex;
+    position: relative;
+    width: 100%;  
+    height: 100%; 
+    align-items: center;
+    flex-direction: row;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/* because you played */
+section:nth-child(8) {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 50px 1fr;
+
+gap: 1%;
+
+}
+
+section:nth-child(8) h2 {
+    grid-column:1 / span 4;
+}
+
+section:nth-of-type(8) > article {
+    background-color: #313E4D;
+}
+
+section:nth-of-type(8) > article:hover {
+    background: #708094;
+    background: radial-gradient(circle, rgba(112, 128, 148, 1) 0%, rgba(52, 64, 79, 1) 100%);
+}
+
+section:nth-of-type(8) article > p {
+    background: var(--kopjeBlauw);
+    color: var(--sellectorblauw);
+    width: max-content;
+    padding: 2px;
+    font-size: .7em;
+}
+
+section:nth-of-type(8) article > p:nth-child(2) {
+    background: var(--featuredBackground);
+    color: var(--white);
+    max-width: fit-content;
+    padding: 1px;
+}
+
+
+/* soortgelijk aan discount box maar kleiner */
+section:nth-of-type(8) article > div {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-rows: auto;
+
+    font-size: .7em;
+}
+
+section:nth-of-type(8) article > div p {
+    background: var(--featuredBackground);
+    padding: 1px;
+    color: var(--white);
+}
+
+section:nth-of-type(8) article > div p:first-of-type {
+    color: var(--kortingTekstGroen);
+    background: var(--kortingAchtergrondGroen);
+}
+
+section:nth-of-type(8) article > div p:nth-child(2) {
+color: var(--kortingTekstGrijs);
+text-decoration-line: line-through;
+}
+
+
+
+
+
+
+
+
+
+/* your discovery queue raar ding */
+section:nth-of-type(9) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    align-self: center;
+    justify-self: center;
+
+
+}
+
+
+section:nth-of-type(9) > div {
+    grid-column:1 / span 2;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    width: 100%;
+}
+
+section:nth-of-type(9) > div img {
+    width: 100%;
+}
+
+section:nth-of-type(9) > p {
+    grid-column:1 / span 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    
+    background: lightblue;
+    color: black;
+    padding: 1rem;
+    padding-right: 30%;
+}
+
+
+section:nth-of-type(9) > a {
+    display: inline-block; 
+    justify-self: end;
+    border: 2px var(--white);
+    padding: 5px 10px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* browse steam */
+section:nth-of-type(10) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    gap: 1%;
+    width: 100%;
+    justify-self: center;
+}
+
+
+
+section:nth-of-type(10) h2 {
+    grid-column:1 / span 4;
+}
+
+
+@media (max-width: 910px) {
+    section:nth-of-type(10) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+    }
+
+    section:nth-of-type(10) > h2 {
+        grid-column:1 / span 2;
+    }
+}
+
+section:nth-of-type(10) button {
+    background: #07BEFF;
+    background: linear-gradient(90deg, rgba(7, 190, 255, 1) 0%, rgba(45, 116, 255, 1) 100%);
+    color: var(--white);
+    border: none; 
+    border-radius: 5px;
+    height: 70px;
+}
+section:nth-of-type(10) button:hover{
+    background: #07BEFF;
+    background: radial-gradient(circle, rgba(7, 190, 255, 1) 47%, rgba(45, 116, 255, 1) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  reviews */
+section:nth-of-type(11) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+}
+
+section:nth-of-type(11) > h2 {
+    grid-column: 1/ span 2;
+}
+
+section:nth-of-type(11) > a {
+    justify-self: end;
+}
+
+
+    section:nth-of-type(11) article {
+        grid-column: 1 / span 2; /* zet de article in 2 grid slots */
+
+        background: var(--featuredBackground);
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+    }
+
+
+
+    /* met een sterretje sellecteer je alle childs, met de > sellecteer je alleen de childs die in de article zijn ipv echt alle childs */
+    section:nth-of-type(11) article > * {
+        padding: 3%;
+        align-self: center;
+    }
+
+
+    section:nth-of-type(11) article > img {
+        grid-row: 1 / span 4;
+        height: 100%;
+        padding: 0;
+    }
+
+
+    section:nth-of-type(11) article > a {
+        justify-self: center;
+        align-self: end;
+        padding: 0;
+    }
+
+
+
+
+    section:nth-of-type(11) article > div:first-of-type {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 0.8em 0.5em 0.5em;
+
+        gap: 0.4em;
+    }
+
+    section:nth-of-type(11) article > div:first-of-type img {
+        grid-row: 1 / span 3;
+        height: 100%;
+    }
+
+    section:nth-of-type(11) article > div:first-of-type p {
+        display: flex;
+        height: fit-content;
+        width: fit-content;
+
+        font-size: .5em;
+
+    }
+
+    section:nth-of-type(11) article > div:first-of-type p:first-of-type{
+        color: var(--textBlauw);
+        font-size: 0.8em;
+
+    }
+
+
+
+    section:nth-of-type(11) article > div:nth-of-type(2) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+
+
+    /* ik hoef alleen de grid van de article aan te passen om hem voor mobiel mooi te maken */
+@media (max-width: 910px) {
+    section:nth-of-type(11) article {
+        grid-column: 1 / span 2; /* zet de article in 2 grid slots */
+
+        background: var(--featuredBackground);
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    section:nth-of-type(11) article > img {
+        grid-row: 1;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new & trending */
+
+/* buttons */
+main > nav {
+    margin-left: 250px;
+    grid-column: 1/ span 2;
+}
+
+main > nav ul{
+    display: flex;
+    flex-direction: row;
+
+    width:100%;
+    margin: 0;
+}
+
+main > nav ul li button {
+    background: var(--background);
+    color: var(--sellectorblauw);
+    border: none; 
+    padding: 5%;
+}
+
+main > nav ul li button:hover {
+    color: var(--white);
+}
+
+main > nav ul li:first-of-type button {
+    background: var(--backgroundNewTreding);
+}
+
+
+
+/* zet de section terug in column 1 zodat het achtergrond mooi mee wordt gepakt over het hele scherm*/
+@media (min-width: 1350px) {
+    main > section:nth-of-type(12) {
+        grid-column: 1/ span 3;  
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+}
+
+section:nth-of-type(12) {
+    background: var(--backgroundNewTreding);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
+    padding-top: 1%;
+    gap: 3%;
+}
+
+
+
+
+section:nth-of-type(12) article {
+    display: grid;
+    grid-template-columns: minmax(auto, 20%) auto 10% 15%;
+    grid-template-rows: repeat(69px);
+
+    background: #223A4C;
+}
+
+section:nth-of-type(12) article > div:first-of-type p:not(:first-child){
+    opacity: 50%;
+}
+
+section:nth-of-type(12) article > div img {
+    opacity: 50%;
+}
+
+section:nth-of-type(12) article > p {
+    display: block;
+    width: max-content;
+    height: max-content;
+
+    align-self: center;
+    justify-self: center;
+
+    color: var(--kortingTekstGroen);
+    background: var(--kortingAchtergrondGroen);
+    padding: 5%;
+}
+
+
+
+section:nth-of-type(12) article > div:nth-of-type(2) {
+    align-self: end;
+    justify-self: end;
+    padding: 2%;
+}
+
+section:nth-of-type(12) article > div:nth-of-type(2) p:not(:nth-of-type(2)) {
+    opacity: 50%;
+}
+
+section:nth-of-type(12) article > div:nth-of-type(2) p:first-of-type{
+    text-decoration-line: line-through;
+}
+
+section:nth-of-type(12) article > div:nth-of-type(2) p:nth-of-type(2) {
+    color: var(--kortingTekstGroen);
+
+}
+
+
+section:nth-of-type(12) article > div > div {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+section:nth-of-type(12) article:hover {
+    background: #5d9fd2;
+    color: var(--background);
 }

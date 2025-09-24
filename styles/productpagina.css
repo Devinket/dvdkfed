@@ -1,4 +1,100 @@
+:root {
+    --grijs: #adadad;
+    --white: #ffffff;
+
+    --sellectorblauw: #1a9fff;
+    --kopjeBlauw: #3883cf73;
+    --textBlauw: #3ecdea;
+    --selectorGradientBlauw: linear-gradient(90deg,rgba(32, 157, 168, 1) 0%, rgba(74, 77, 207, 1) 100%);
+}
+
+
+
 .groot-scherm-nav ul:first-child li:nth-child(2) {
-    color: #1a9fff;
+    color: var(--sellectorblauw);
     
 }
+
+
+
+
+
+/* geeft de main een maximum breedte van 940 pixels */
+main {
+    width: 100%;
+  }
+  
+  @media (min-width: 940px) {
+    main {
+      width: 940px;
+      margin: 0 auto;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Titel van de pagina */
+main section:nth-of-type(1) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+main section:nth-of-type(1) ul {
+    grid-column: 1 / span 2;
+
+    display: flex;
+    flex-direction: row;
+
+    font-size: 0.8em;
+    gap: 2em;
+}
+
+main section:nth-of-type(1) ul li a {
+    color: var(--grijs);
+}
+
+main section:nth-of-type(1) ul li a:hover {
+    color: var(white);
+}
+
+
+
+
+
+main section:nth-of-type(1) h2{
+    font-size: 1.7em;
+    font-weight: 400;
+    color: var(--white);
+}
+
+main section:nth-of-type(1) > a {
+    justify-self: end;
+
+    background: var(--kopjeBlauw);
+    color: var(--textBlauw);
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    padding: 1%;
+}
+
+main section:nth-of-type(1) > a:hover {
+    background: var(--selectorGradientBlauw);
+    color: var(--white);
+}
+
+

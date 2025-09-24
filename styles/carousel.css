@@ -1,0 +1,37 @@
+.carousel {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    anchor-name: --carousel;
+  
+    columns: 1;
+    block-size: 10lh;
+    text-align: center;
+  
+    &::column {
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
+
+  .carousel--scroll-buttons {
+    &::scroll-button(*) {
+      position: fixed;
+      position-anchor: --carousel;
+      font-family: "Material Symbols Outlined";
+    }
+  
+    &::scroll-button(right) {
+      position-area: inline-end center;
+      content: 'arrow_forward' / 'Next';
+    }
+  
+    &::scroll-button(left) {
+      position-area: inline-start center;
+      content: 'arrow_back' / 'Previous';
+    }
+  }
+
+  body{ 
+    background: rgb(169, 169, 169);
+  }

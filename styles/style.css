@@ -407,9 +407,19 @@ h1 {
   letter-spacing: 1.5px;
 }
 
+h2 {
+  font-size: 1em;
+  color: var(white);
+  margin: 0;
+}
 
+p {
+  margin: 0;
+}
 
-
+video {
+  justify-self: center;
+}
 
 /****************/
 /* styling op specifieke elementen */
@@ -435,6 +445,8 @@ color: blue;
   background-color: var(--header-achtergrond);
   color: var(--white);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);;
+
+  z-index: 0;
 }
 
 .mobiel-nav img {
@@ -527,6 +539,10 @@ color: blue;
     width: 100%;
   }
 
+  .mobiel-cattegorie ul {
+    margin: 0;
+  }
+
 
 /* past image aan */
   .mobiel-cattegorie ul li:first-child a { 
@@ -551,7 +567,7 @@ color: blue;
 }
 
 .mobiel-cattegorie ul {
-  font-size: 13px;
+  font-size: .8em;
   line-height: 34px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   font-weight: 600;
@@ -658,8 +674,8 @@ color: blue;
 /* pas wishlist aan */
 
 .wishlist-button {
-  position: absolute;
-  right: 90px;
+  position: relative;
+  left: 75%;
 
   background: #7FA9B2;
   color: var(--white);
@@ -691,8 +707,18 @@ color: blue;
 }
 
  header .groot-scherm-nav ul:first-child li a:hover {
-  text
+  color: white;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -701,6 +727,64 @@ color: blue;
 
 /* footer */
 
+
+footer {
+  background: var(--header-achtergrond);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+.rule {
+  height: 8px;
+  border-top: 1px solid #363c44;
+}
+
+
+footer > div{
+  width: 940px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+footer > div section:first-of-type {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+}
+
+footer > div > section > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+footer > div > section > div p:first-of-type {
+  grid-column: 1 / span 2;
+}
+
+
+
+
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+footer ul li a:hover {
+  color: var(white);
+}
 
 @media (max-width: 910px) {
   footer{
