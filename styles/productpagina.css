@@ -2,11 +2,47 @@
     --grijs: #adadad;
     --white: #ffffff;
 
+
+    --color-text:#c6d4df;
+    --background: #1B2838;
+    --light_gray: #e5e5e5;
+    --header-achtergrond: #161A21;
+    --article-achtergrond: #0e162298;
+    --item-achtergrond: linear-gradient(90deg,rgba(48, 60, 73, 1) 0%, rgba(90, 102, 115, 1) 100%);
+
     --sellectorblauw: #1a9fff;
-    --kopjeBlauw: #3883cf73;
-    --textBlauw: #3ecdea;
-    --selectorGradientBlauw: linear-gradient(90deg,rgba(32, 157, 168, 1) 0%, rgba(74, 77, 207, 1) 100%);
+    --kopjeBlauw: #2b455e9e;
+    --textBlauw: #67C0F4;
+    --selectorGradientBlauw: linear-gradient(90deg,rgba(91, 161, 235, 1) 0%, rgba(54, 96, 202, 1) 100%);
+
+    --GroeneKnop: linear-gradient(90deg,rgba(130, 175, 63, 1) 0%, rgba(100, 137, 49, 1) 100%);
+    --GroeneKnopHover: linear-gradient(90deg,rgb(153, 205, 75) 0%, rgb(122, 167, 60) 100%);
+    --BlauweKnop: linear-gradient(90deg,rgba(91, 161, 235, 1) 0%, rgba(54, 96, 202, 1) 100%);
+    --BlauweKnopHover:linear-gradient(90deg,rgba(143, 197, 255, 1) 0%, rgba(65, 112, 232, 1) 100%);;
+
+    --h3: #4A87B8;
+    --dlc-hover: linear-gradient(90deg,rgba(101, 190, 241, 1) 0%, rgba(68, 126, 160, 1) 100%);
+
+    --more-article: radial-gradient(circle,rgba(71, 81, 93, 1) 0%, rgba(55, 66, 79, 1) 100%);
+    --more-background: #2B3644;
 }
+
+
+
+
+main ul {
+    margin-top: 5px;
+}
+
+main h2 {
+    color: var(--white);
+    font-weight: 400;
+}
+
+
+
+
+
 
 
 
@@ -22,12 +58,26 @@
 /* geeft de main een maximum breedte van 940 pixels */
 main {
     width: 100%;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: start;
+    gap: 1em;
   }
   
   @media (min-width: 940px) {
     main {
       width: 940px;
       margin: 0 auto;
+      /* bron: Main centreren */
+    }
+  }
+
+  @media (max-width: 940px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;   
     }
   }
 
@@ -44,14 +94,16 @@ main {
 
 
 /* Titel van de pagina */
-main section:nth-of-type(1) {
+main > section:nth-of-type(1) {
+    grid-column: 1 / span 2;
+
     display: grid;
     width: 100%;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 }
 
-main section:nth-of-type(1) ul {
+main > section:nth-of-type(1) ul {
     grid-column: 1 / span 2;
 
     display: flex;
@@ -61,11 +113,11 @@ main section:nth-of-type(1) ul {
     gap: 2em;
 }
 
-main section:nth-of-type(1) ul li a {
+main > section:nth-of-type(1) ul li a {
     color: var(--grijs);
 }
 
-main section:nth-of-type(1) ul li a:hover {
+main > section:nth-of-type(1) ul li a:hover {
     color: var(white);
 }
 
@@ -73,13 +125,13 @@ main section:nth-of-type(1) ul li a:hover {
 
 
 
-main section:nth-of-type(1) h2{
+main > section:nth-of-type(1) h2{
     font-size: 1.7em;
     font-weight: 400;
     color: var(--white);
 }
 
-main section:nth-of-type(1) > a {
+main > section:nth-of-type(1) > a {
     justify-self: end;
 
     background: var(--kopjeBlauw);
@@ -92,9 +144,1021 @@ main section:nth-of-type(1) > a {
     padding: 1%;
 }
 
-main section:nth-of-type(1) > a:hover {
+main > section:nth-of-type(1) > a:hover {
     background: var(--selectorGradientBlauw);
     color: var(--white);
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* beschrijving */
+main > section:nth-of-type(2) {
+    font-size: 13px; /* px ipv em omdat steam dat ook zo heeft */
+    background: var(--article-achtergrond);
+
+    display: flex;
+    flex-direction: column;
+}
+
+main > section:nth-of-type(2) h2{
+    font-size: 1.7em;
+    font-weight: 600;
+    color: var(--white);
+}
+
+main > section:nth-of-type(2) > * {
+    padding-left: .6em;
+    padding-right: .6em;
+}
+
+main > section:nth-of-type(2) > img {
+    padding: 0;
+}
+
+
+/* specifieke responsive vormgeving */
+
+@media (min-width: 501px) {
+    main > section:nth-of-type(2) h2 {
+        display: none;
+    }
+
+    main > section:nth-of-type(2) p:first-of-type {
+        grid-column: 2;
+    }
+}
+
+@media (min-width:501px) and (max-width:940px) {
+    main > section:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: 45% 55%;
+    }
+
+    main > section:nth-of-type(2) p:first-of-type {
+        grid-column: 2;
+        grid-row: 1;
+        height: fit-content;
+    }
+
+    main > section:nth-of-type(2) ul {
+        grid-column: 2;
+    }
+
+    main > section:nth-of-type(2) > img{
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        width: 100%;
+        object-fit: cover; 
+    }
+} 
+
+
+@media (max-width:500px) {
+    main > section:nth-of-type(1) {
+        display: none;
+    }
+
+    main > section:nth-of-type(2) ul:nth-of-type(2) {
+        order: 1;
+
+        background: var(--background);
+        padding: .5em;
+        gap: .5em;
+    }
+}
+
+
+
+@media (min-width: 940px) {
+    main > section:nth-of-type(2) {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+main > section:nth-of-type(2) > ul:not(:nth-of-type(3)){
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto; 
+}
+
+main >section:nth-of-type(2) > ul:not(:nth-of-type(3)) li {
+    margin-right: 1em;
+    color: var(--grijs);
+}
+
+main > section:nth-of-type(2) > ul:not(:nth-of-type(3)) li:nth-of-type(2) {
+    color: var(--sellectorblauw);
+}
+main > section:nth-of-type(2) > ul:not(:nth-of-type(3)) li:nth-of-type(4) {
+    color: var(--sellectorblauw);
+}
+
+main > section:nth-of-type(2) > ul:not(:nth-of-type(3)) li:nth-of-type(6) {
+    color: var(--color-text);
+}
+
+
+main > section:nth-of-type(2) div {
+    margin-top: 1em;
+    grid-column: auto / span 2;
+}
+
+main > section:nth-of-type(2) div ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
+}
+
+main > section:nth-of-type(2) div ul li {
+    background: var(--kopjeBlauw);
+    color: var(--textBlauw);
+    padding: 0.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* code gekopieerd uit flexbox oefening 2, ik heb de code iets aangepast zodat ik wel laat zien dat ik begrijp waar ik iets moet aanpassen */
+main > section:nth-of-type(3) a video{
+    width: 600px;
+    height: 338;
+}
+
+
+main > section:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+    display:flex;
+    flex-direction:column;
+    gap:min(2vw, 1.5em);
+
+    background: var(--article-achtergrond);
+}
+
+main > section:nth-of-type(3) > ul {
+  /* de li's naast elkaar */
+  display:flex;
+  /* de li's buiten beeld zijn verborgen */
+  overflow:hidden;
+  /* de li's snappen bij scrollen met de a's in de nav */
+  scroll-snap-type:x mandatory;
+  /* en dat doen ze soepel */
+  scroll-behavior:smooth;
+
+  }
+
+
+main > section:nth-of-type(3) > ul li {
+    /* de li's zijn zo breed als de ul*/
+    flex-basis:100%;
+    flex-shrink:0;
+    /* en snappen in het midden van de ul */
+    scroll-snap-align:center;
+  }
+
+
+
+
+main > section:nth-of-type(3)  nav {
+    display:flex;
+    gap:min(2vw, 1.5em);
+    
+    /* zodat de nav in de gaten houdt welke li in de ul in beeld is */
+    scroll-target-group: auto;
+  }
+  
+main > section:nth-of-type(3) a {
+    /* de links zijn grijs */
+    filter:grayscale(0.7);
+    transition:1;
+
+  }
+  
+main > section:nth-of-type(3) a:target-current {
+    /* de normale kleur */
+    filter:grayscale(0);
+    border: 3px solid var(--white);
+    /* de nomale cursor - geen klikcursor */
+    cursor:default;
+  }
+
+main > section:nth-of-type(3) ul:first-of-type video {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* buttons om het spel op bijvoorbeeld wishlist te zetten */
+main > section:nth-of-type(4) {
+    grid-column: 1 / span 2;
+    background: var(--article-achtergrond);
+    width: 100%;
+  }
+
+  /* button vormgeving */
+
+main > section:nth-of-type(4) button {
+    background: var(--kopjeBlauw);
+    color: var(--textBlauw);
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+main > section:nth-of-type(4) button:hover {
+    background: var(--selectorGradientBlauw);
+    color: var(--white);
+}
+
+
+/* responsive buttons */
+
+  @media (max-width: 500px) {
+
+    main > section:nth-of-type(4) ul {
+        display: grid;
+        grid-template-columns: 40% 40% 20%;
+        grid-template-rows: 2em 2em;
+        gap: .3rem;
+    }
+
+    main > section:nth-of-type(4) ul li:first-of-type {
+        grid-column: 1 / span 3;
+    }
+
+    main > section:nth-of-type(4) ul li:last-of-type {
+        display: none;
+    }
+}
+
+
+
+
+@media (min-width:501px) and (max-width:940px) {
+
+    main > section:nth-of-type(4) ul {
+        display: flex;
+        flex-direction: row;
+        gap: .3rem;
+        margin: 1em;
+    }
+
+    main > section:nth-of-type(4) ul li:nth-of-type(2) {
+        display: none;
+    }
+
+    main > section:nth-of-type(4) ul li:last-of-type {
+        display: none;
+
+    }
+
+    main > section:nth-of-type(4) ul li button{
+        padding: .6em;
+    }
+
+}
+
+
+
+
+@media (min-width: 940px) {
+
+    main > section:nth-of-type(4) ul {
+        display: flex;
+        flex-direction: row;
+        gap: .3rem;
+        margin: 1em;
+    }
+
+    main > section:nth-of-type(4) ul li:nth-of-type(2) {
+        display: none;
+    }
+
+    main > section:nth-of-type(4) ul li:last-of-type {
+        /* deze zorgt dat de item aan het eind van de flexbox komt. Aangezien justify-self niet werkt in flexboxen */
+        margin-left: auto;
+    }
+
+    main > section:nth-of-type(4) ul li button {
+        padding: .6em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* linkerkollom */
+.column-left {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row: auto;
+    gap: 3em;
+}
+
+@media (max-width: 500px) {
+    .column-left {
+        background: var(--article-achtergrond);
+        padding-top: 1em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* play world of Tanks */
+.column-left > article:nth-of-type(1) {
+    grid-column: 1;
+
+    background: var(--item-achtergrond);
+    border-radius: 10px;
+    padding: 1em;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 0;
+}
+
+.column-left > article:nth-of-type(1) h2{
+    font-size: 1.3em;
+}
+
+.column-left > article:nth-of-type(1) > img {
+    justify-self: end;
+}
+
+.column-left > article:nth-of-type(1) > ul {
+    display: flex;
+    flex-direction: row;
+
+    gap: .1em;
+    
+    grid-column: 2;
+    position: relative;
+    height: max-content;
+
+    border: .2em solid var(--header-achtergrond);
+    margin-left: auto;
+
+
+    background: var(--header-achtergrond);
+
+    font-weight: 200;
+}
+
+.column-left > article:nth-of-type(1) > ul li:first-child {
+    padding-left: .8em;
+    padding-right: .8em;
+    padding-bottom: .3em;
+    padding-top: .3em;
+}
+
+.column-left > article:nth-of-type(1) > ul li button {
+    border: none;
+    padding-left: .8em;
+    padding-right: .8em;
+    padding-bottom: .3em;
+    padding-top: .3em;
+}
+
+@media (max-width: 940px) {
+    .column-left > article:nth-of-type(1) > ul > li:nth-of-type(2) button {
+        display: none;
+    }
+
+}
+
+
+/* vormgeving buttons */
+.column-left > article:nth-of-type(1) > ul > li:nth-of-type(2) button {
+    background: var(--GroeneKnop);
+    color: var(--white);
+}
+
+.column-left > article:nth-of-type(1) > ul > li:nth-of-type(2) button:hover {
+    background: var(--GroeneKnopHover);
+}
+
+.column-left > article:nth-of-type(1) > ul > li:nth-of-type(3)  > button{
+    background: var(--BlauweKnop);
+    color: var(--white);
+}
+.column-left > article:nth-of-type(1) > ul > li:nth-of-type(3) button:hover {
+    background: var(--BlauweKnopHover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* dlc */
+.column-left > article:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto;
+}
+
+.column-left > article:nth-of-type(2) > a {
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+
+    font-size: .7em;
+    color: var(--white);
+    padding: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 1px solid var(--grijs);
+}
+
+.column-left > article:nth-of-type(2) > a:hover {
+    border: 1px solid var(--white);
+}
+
+.column-left > article:nth-of-type(2) ul {
+    grid-column: 1 / span 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+}
+
+
+
+
+.column-left > article:nth-of-type(2) ul li {
+    background: var(--item-achtergrond);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: .8em;
+    color: var(--grijs);
+    padding: .3em;
+}
+
+
+
+.column-left > article:nth-of-type(2) ul li:hover {
+    background: var(--dlc-hover); 
+}
+
+
+
+.column-left > article:nth-of-type(2) ul li:first-child {
+    display: grid;
+    grid-template-columns: 30% auto max-content;
+    grid-row: auto;
+
+    align-items: center;
+}
+
+.column-left > article:nth-of-type(2) ul li:first-child div {
+    padding: 1em;
+}
+
+.column-left > article:nth-of-type(2) ul li:first-child div p:first-of-type {
+    width: max-content;
+    background: var(--kopjeBlauw);
+    color: var(--light_gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: .3em;
+}
+
+.column-left > article:nth-of-type(2) ul li > p:last-child {
+  color: var(--white);  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* game info */
+.column-left > article:nth-of-type(3) {
+    padding: 1em;
+}
+
+.column-left > article:nth-of-type(3) video {
+    margin-right: auto;
+}
+
+.column-left > article:nth-of-type(3) h3 {
+    color: var(--h3);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1em;
+
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
+
+.column-left > article:nth-of-type(3) p {
+    color: var(--grijs);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* system requirements */
+@media (min-width: 701px) {
+
+    .column-left > article:nth-of-type(4) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: .3em;
+        padding: 1em;
+    }
+
+    .column-left > article:nth-of-type(4) > h2 {
+        grid-column: 1 / span 2;
+    }
+
+    .column-left > article:nth-of-type(4) > div {
+        grid-column: 1 / span 2;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .column-left > article:nth-of-type(4) {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: .3em;
+        padding: 1em;
+    }
+}
+
+.column-left > article:nth-of-type(4) article ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    padding: 1em;
+    color: var(--grijs);
+}
+
+
+
+
+
+/* rechterkollom */
+.column-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row: auto;
+    gap: 3em;
+}
+
+@media (min-width:700px) and (max-width:940px) {
+    .column-right {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row: auto;
+        gap: 3em;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .column-right {
+        background: var(--article-achtergrond);
+        padding-top: 1em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* allemaal links */
+.column-right > article:first-of-type {
+    background: var(--article-achtergrond);
+    padding: 1em;
+    color: var(--grijs);
+    font-size: .9em;
+    height: max-content;
+}
+
+
+
+
+.column-right > article:first-of-type ul{
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+
+
+.column-right > article:first-of-type ul:first-of-type a {
+    color: var(--sellectorblauw);
+}
+
+.column-right > article:first-of-type ul:first-of-type a:hover {
+    color: var(--white);
+
+}
+
+.column-right > article:first-of-type ul:nth-of-type(2) li {
+    background: var(--kopjeBlauw);
+    color: var(--textBlauw);
+    width: 100%;
+    padding: .5em;;
+}
+
+.column-right > article:first-of-type ul:nth-of-type(2) li:hover {
+    background: var(--dlc-hover);
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* similar to games you played */
+.column-right > article {
+    background: var(--article-achtergrond);
+    padding: 1em;
+
+    height: max-content;
+}
+
+.column-right > article p {
+    color: var(--grijs);
+    margin: .3em
+}
+
+.column-right > article ul {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* More from Wargaming*/
+main > section:nth-of-type(7) {
+    grid-column: 1 / span 2;
+
+    /* deze code negeert dat de main 940 pixels is, waardoor het achtergrond op het hele scherm te zien is */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    background: var(--more-background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1.1em;
+    gap: 1em;
+}
+
+main > section:nth-of-type(7) > article {
+    max-width: 940px;
+    width: 100%;
+
+    background: var(--more-article);
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+
+    display: grid;
+    grid-template-columns: auto 65px 65px;
+    gap: 1em;
+}
+
+
+
+main > section:nth-of-type(7) > article > div { 
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+@media (max-width:940px) {
+    main > section:nth-of-type(7) > article > div {
+        grid-column: 1 / span 3;
+    }
+}
+
+main > section:nth-of-type(7) > article > div > * {
+    /* centreert de items */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+main > section:nth-of-type(7) > article > div img {
+    height: 35px;
+    width: 35px;
+}
+
+
+
+
+main > section:nth-of-type(7) > article > ul img {
+    /* vaste waarde want op de originele website staat hij ook vast*/
+    width: 203px;
+
+}
+
+
+main > section:nth-of-type(7) > article > ul {
+    grid-column: 1 / span 3;
+    width: 100%;
+    display: grid;
+        
+    /*
+    grid-template-columns: 203px 203px 203px 203px; */
+    display: grid;
+    grid-auto-flow: column;        /* zet items in kolommen ipv rijen */
+    grid-auto-columns: 203px;      /* elke kolom is 203px breed */
+    overflow-x: auto;              /* horizontale scroll als het te breed wordt */
+    grid-template-rows: 1fr; 
+
+    /* gekopieerd van de flexbox opdracht */
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    gap: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grijs) #f0f0f000;
+}
+
+
+
+main > section:nth-of-type(7) > article > button {
+    grid-column: 2;
+
+    background: var(--background);
+    color: var(--textBlauw);
+    border: none;
+
+    width: fit-content;
+    padding: .5em;
+    font-size: 1em;
+}
+
+
+main > section:nth-of-type(7) > article > button:hover {
+    /* om een reden is dit de enige button met een transition op de originele website */
+    transition: .3s;
+    background: var(--selectorGradientBlauw);
+    color: var(--white);
+}
+
+main > section:nth-of-type(7) > article > a {
+    grid-column: 3;
+
+    background: var(--background);
+    color: var(--textBlauw);
+    border: none;
+
+    width: fit-content;
+    padding: .5em;
+    font-size: 1em;
+}
+
+main > section:nth-of-type(7) > article > a:hover {
+    background: var(--selectorGradientBlauw);
+    color: var(--white);
+}
+
+
+
+
+
+
+main > section:nth-of-type(7) > article > h2 {
+    display: flex;
+    align-items: center;
+
+    color: var(--grijs);
+}
+
+main > section:nth-of-type(7) > article h2 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* reviews */
+main > section:nth-of-type(8) {
+    grid-column: 1 / span 2;
+}
+
+main > section:nth-of-type(8) > article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+main > section:nth-of-type(8) > article > * {
+    margin-right: 1em;
+}
+
+main > section:nth-of-type(8) > article img {
+    width: 30px;
+    grid-row: 1 / span 3;
+}
+
+@media (min-width: 501px) {
+    main > section:nth-of-type(8) > article {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+
+/* vormgeving */
+main > section:nth-of-type(8) > article {
+    background: var(--more-background);
+    padding: .1em;
+    width: 100%;
+
+    font-size: 0.9em;
+}
+
+
+main > section:nth-of-type(8) a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+main > section:nth-of-type(8) a:hover {
+    color: var(--sellectorblauw);
+}
