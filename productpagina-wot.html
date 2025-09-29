@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,73 +11,112 @@
 </head>
 
 <body>
-    <header>
-<!-- nav voor groot scherm-->
-<nav class="groot-scherm-nav">
-    <div>
-        <ul>
-            <li>
-                <a href="index.html"><img src="./images/header_logo.png"></a>
-                <a href="index.html"><h1 alt="Steam homepagina">Steam</h1></a>
-            </li>
-            <li><a href="index.html" alt="Store, de pagina waar je nu op zit">Store</a></li>
-            <li><a href="dummy-page.html" alt="Community pagina">Community</a></li>
-            <li><a href="dummy-page.html" alt="Jouw profiel, Devinket">Devinket</a></li>
-            <li><a href="dummy-page.html" alt="Chat met spelers">Chat</a></li>
-            <li><a href="dummy-page.html" alt="Support, voor als je ergens hulp bij nodig hebt">Support</a></li>
-        </ul>
-        <ul>
-            <li><a href="dummy-page.html" alt="Knop notificaties"><img src="./images/notification_bell.png" alt="Icoon van een notificatiebel"></a></li>
-            <li><a href="dummy-page.html" alt="klik om naar jouw profiel te gaan">Devinket</a></li>
-            <li><a href="dummy-page.html" alt="Je hebt 0 euro in je portomonee">0,--€</a></li>
-            <li><a href="dummy-page.html" alt="Jouw profielfoto, ga naar jouw profiel."><img src="./images/user-profile.jpg" alt="Profielfoto van jou"> </a></li>
-        </ul>
-    </div>
-</nav>
+	<header>
+		<!-- nav voor groot scherm-->
+		<nav class="groot-scherm-nav">
+			<div>
+				<ul>
+					<li>
+                        <a href="index.html"><img src="./images/header_logo.png"></a>
+                        <a href="index.html"><h1 alt="Steam homepagina">Steam</h1></a>
+					</li>
+					<li><a href="dummy-page.html" alt="Store, The page you are on now">Store</a></li>
+					<li><a href="dummy-page.html" alt="Community page">Community</a></li>
+					<li><a href="dummy-page.html" alt="Your profile, Devinket">Devinket</a></li>
+					<li><a href="dummy-page.html" alt="Chat with players">Chat</a></li>
+					<li><a href="dummy-page.html" alt="Support, for if you need help">Support</a></li>
+				</ul>
+				<ul>
+					<li><a href="dummy-page.html" alt="Notificatiom button"><img src="./images/notification_bell.png" alt=""></a></li>
+					<li><a href="dummy-page.html" alt="Go to your profile">Devinket</a></li>
+					<li><a href="dummy-page.html" alt="You have 0 euro in your wallet">0,--€</a></li>
+					<li><a href="dummy-page.html" alt="Your profile"><img src="./images/user-profile.jpg" alt=""> </a></li>
+				</ul>
+			</div>
+		</nav>
 
-<!-- nav voor klein scherm-->
- <nav class="mobiel-nav">
-    <ul>
-        <li><img src="./images/header_menu_hamburger.png" alt="Hamburger menu die verwijst naar verschillende belangrijke pagina's"></li>
-        <li>
-            <img src="./images/header_logo.png">
-        </li>
-        <li>
-            <h1 alt="Steam homepagina">Steam</h1>
-        </li>
-    </ul>
+		<!-- nav voor klein scherm-->
+		 <nav class="mobiel-nav">
+			<ul>
+				<li><button><img src="./images/header_menu_hamburger.png" alt="Hamburger menu that leads to a navigation menu"></button></li>
+				<li> <a href="index.html">
+					<img src="./images/header_logo.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="index.html">
+					<h1>Steam</h1>
+					</a>
+				</li>
+			</ul>
+		
+		</nav>
+		
+		<a class="wishlist-button" href="dummy-page.html" alt="Go to your wishlist">wishlist</a>
 
-</nav>
+		<nav class="mobiel-cattegorie">
+			<ul>
+				<li>
+					<a href="dummy-page.html" alt="Go to store page">
+						<img src="./images/user-profile.jpg" alt="">
+									Your Store
+					</a>
+				</li>
+
+				<li><a href="dummy-page.html" alt="search for worthy games to play"><p>New & Noteworthy</p></a></li>
+				<li><a href="dummy-page.html" alt="search in different categories">Categories</a></li>
+				<li><a href="dummy-page.html" alt="Buy points">Points Shop</a></li>
+				<li><a href="dummy-page.html" alt="Go to recent news">News</a></li>
+				<li><a href="dummy-page.html" alt="Go to 'labs'">Labs</a></li>
+				<li>
+					<form role="search" action="#">
+						<input type="search" name="search" id="search" placeholder="Search" autocomplete="off" aria-label="search">
+						<button type="submit"><img src="./images/search_icon_btn.png" alt="search icon"></button>
+					</form>
+							<!-- Wat in <form> staat heb ik gekopieerd en aangepast van de opdracht FED 25/26 - Flexbox - Oefening 2-->
+				</li>
+			</ul>
+		</nav>
 
 
-    <a class="wishlist-button" href="dummy-page.html" alt="Ga naar jouw wishlist">wishlist</a>
-
-    <nav class="mobiel-cattegorie">
-        <ul>
-            <li>
-                <a href="dummy-page.html" alt=" Ga naar de Store pagina">
-                    <img src="./images/user-profile.jpg" alt="Jouw profielfoto">
-                                Your Store
-                </a>
-            </li>
-
-            <li><a href="dummy-page.html" alt="Zoek naar nieuwe en waardige games om te spelen"><p>New & Noteworthy</p></a></li>
-            <li><a href="dummy-page.html" alt="Zoek naar verschillende categorieen">Categories</a></li>
-            <li><a href="dummy-page.html" alt="Koop punten">Points Shop</a></li>
-            <li><a href="dummy-page.html" alt="Ga naar het nieuws">News</a></li>
-            <li><a href="dummy-page.html" alt="Ga naar 'labs'">Labs</a></li>
-            <li>
-                <form role="search" action="#">
-                    <input type="search" name="search" id="search" placeholder="Search" autocomplete="off" aria-label="zoeken">
-                    <button type="submit"><img src="./images/search_icon_btn.png" alt="Zoeken icoon"></button>
-                </form>
-                        <!-- Wat in <form> staat heb ik gekopieerd en aangepast van de opdracht FED 25/26 - Flexbox - Oefening 2-->
-            </li>
-        </ul>
-    </nav>
 
 
-    </header>
+
+		<!-- hamburger menu -->
+		 <nav>
+			<section>
+				<a href="dummy-page.html">
+					<img src="./images/user-profile.jpg" alt="User profile picture">
+					<h2>Devinket</h2>
+					<p>Wallet (0,00€)</p>
+				</a>
+
+				<ul>
+					<li><a href="dummy-page.html"> Notifications <img src="./images/icon-notification_brief.png" alt=""> </a></li>
+					<li><a href="dummy-page.html"> Store </a></li>
+					<li><a href="dummy-page.html"> Community </a></li>
+					<li><a href="dummy-page.html"> You & Friends </a></li>
+					<li><a href="dummy-page.html"> Chat </a></li>
+					<li><a href="dummy-page.html"> Support </a></li>
+				</ul>
+				<ul>
+					<li><a href="dummy-page.html"> Account details </a></li>
+					<li><a href="dummy-page.html"> Store preferences </a></li>
+					<li><a href="dummy-page.html"> Change Language </a></li>
+					<li><a href="dummy-page.html"> Change user </a></li>
+					<li><a href="dummy-page.html"> Get the Steam Mobile App </a></li>
+					<li><a href="dummy-page.html"> View desktop website </a></li>
+					<li><button>Sluit menu</button></li>
+				</ul>
+				<img src="./images/logo_valve_footer.png" alt="Footer">
+				<p>© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+			</section>
+
+			<button></button>
+		 </nav>
+
+
+	</header>
 
 
 
@@ -96,12 +135,80 @@
 
 
 
+
+        <section>
+            <img src="./images/product-images/wot-page/wot_product_profile.jpg" alt="Foto van World of Tanks">
+            <h2>World of Tanks</h2>
+            <ul>
+                <li>Developer</li>
+                <li>Wargaming Group Limited</li>
+                <li>Publisher</li>
+                <li>Wargaming Group Limited</li>
+                <li>Released</li>
+                <li>29 april, 2021</li>  
+            </ul>
+            <p>World of Tanks is a tactical action game with very different gameplay depending on the vehicle type and role. Aside from regular PvP, there are competitive and clan-based modes, special PvE and PvPvE events, and much more. Whether you play to dominate or just enjoy the ride, you'll fit right in.</p>
+
+            <ul>
+                <li>Recent reviews</li>
+                <li>Mixed</li>
+                <li>English reviews</li>
+                <li>Mostly Positive</li>
+            </ul>
+
+            <div>
+            <p>Popular user-defined tags for this product:</p>
+                <ul>
+                    <li>Tanks</li>
+                    <li>Free to play</li>
+                    <li>Action</li>
+                    <li>Military</li>
+                    <li>PvP</li>
+                </ul>
+            </div>
+        </section>
+
+
+
         <section>
             <ul>
-                <li><img src="./images/product-images/wot-page/carousel-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
-                <li><img src="./images/product-images/wot-page/carousel_2-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
-                <li><img src="./images/product-images/wot-page/carousel_3-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
-                <li><img src="./images/product-images/wot-page/carousel_4-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
+                <li id="video1">
+                    <video autoplay muted loop>
+                        <source src="./media/world_of_tanks-flexbox.mp4" type="video/mp4" alt="video of the game World of Tanks">
+                        <source src="./media/world_of_tanks-flexbox.webm" type="video/webm" alt="video of the game World of Tanks">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li id="scherm1"><img src="./images/product-images/wot-page/carousel-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
+                <li id="scherm2"><img src="./images/product-images/wot-page/carousel_2-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
+                <li id="scherm3"><img src="./images/product-images/wot-page/carousel_3-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
+                <li id="scherm4"><img src="./images/product-images/wot-page/carousel_4-1920x1080.jpg" alt="Foto van het spel World of Tanks"></li>
+            </ul>
+
+            <nav>
+                <a href="#video1">
+                <video autoplay muted loop>
+                    <source src="./media/world_of_tanks-flexbox.mp4" type="video/mp4" alt="video of the game World of Tanks">
+                    <source src="./media/world_of_tanks-flexbox.webm" type="video/webm" alt="video of the game World of Tanks">
+                    Your browser does not support the video tag.
+                </video></a>
+                 <a href="#scherm1"><img src="./images/product-images/wot-page/carousel-600x338.jpg" src=""></a>
+                 <a href="#scherm2"><img src="./images/product-images/wot-page/carousel_2-600x338.jpg" src=""></a>
+                 <a href="#scherm3"><img src="./images/product-images/wot-page/carousel_3-600x338.jpg" src=""></a>
+                 <a href="#scherm4"><img src="./images/product-images/wot-page/carousel_4-600x338.jpg" src=""></a>
+            </nav>
+
+
+        </section>
+
+
+        <section>
+            <ul>
+                <li><button>Add to your wishlist</button></li>
+                <li><button>Report</button></li>
+                <li><button>Follow</button></li>
+                <li><button>Ignore</button></li>
+                <li><button>View your queue</button></li>
             </ul>
         </section>
 
@@ -109,6 +216,104 @@
 
 
 
+    <section class="column-left">
+        <article>
+            <h2>Play world of Tanks</h2>
+            <img src="./images/icon_platform_win.png" alt="Playable on Windows">
+            <ul>
+                <li>Free to Play</li>
+                <li><button>Play Game</button></li>
+                <li><button>Add to Library</button></li>
+            </ul>
+        </article>
+
+
+
+
+        <article>
+            <h2>Content for this game</h2>
+            <a href="dummy-page.html" class="more-button">Browse all</a>
+            <ul>
+                <li>
+                    <img src="./images/product-images/wot-page/wot-dlc.jpg" alt="">
+                    <div>
+                        <p>Recommended</p>
+                        <p>World of Tanks -- M4A1 Revalorise Pack (VIII French Medium Tank)</p>
+                    </div>
+                    <p>33,60€</p>
+                </li>
+                <li>
+                    <p>World of Tanks -- Panzerwagen 39 Pack (III Czechoslovakian Light Tank)</p>
+                    <p>8,10€</p>
+                </li>
+                <li>
+                    <p>World of Tanks -- M3 Light Pack (III Soviet Light Tank)</p>
+                    <p>15€</p>
+                </li>
+                <li>
+                    <p>World of Tanks — M4A3E8 Thunderbolt VII Pack (VI American Medium Tank)</p>
+                    <p>25€</p>
+                </li>
+                <li>
+                    <p>World of Tanks — Sherman VC Firefly Pack (VI British Medium Tank)</p>
+                    <p>27,90€</p>
+                </li>
+            </ul>
+        </article>
+
+
+        <article>
+            <h2>About this Game</h2>
+            <div class="rule"></div>
+            <p>World of Tanks offers something for everyone: Try different tactics, vehicles, and modes!</p>
+
+            <h3>Action and Tactics</h3>
+            <p>World of Tanks has a unique pace. Its armored vehicles are fast enough to draw you into the action, yet slow enough to give you time to think strategically. Good reflexes are always a plus, but it's smart and bold moves that can really turn the tide of a battle. Identify a weak spot in the enemy team's defense, move to an advantageous position at just the right moment, or ambush an opponent—and you'll feel like a champion.</p>
+			<video autoplay muted loop>
+				<source src="./media/wot-info.mp4" type="video/mp4">
+				<source src="./media/wot-info.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+
+            <h3>Varied gameplay</h3>
+            <p>The unique pace is yours to control: there are five vehicle types that each play very differently. Generally, light tanks rely on their speed and stealth, heavy tanks on their armor, and mediums on versatility. Tank destroyers (TDs) are feared damage dealers, and self-propelled guns (SPGs) hurl shells at enemies from afar, using an RTS-like view. Almost every one of the 800+ highly detailed vehicles, spread over 11 tiers and 11 nations, feels special.</p>
+            <video autoplay muted loop>
+				<source src="./media/wot-info2.mp4" type="video/mp4">
+				<source src="./media/wot-info2.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+        </article>
+
+        <article>
+            <h2>System Requirements</h2>
+            <div class="rule"></div>
+            <article>
+                <p>Minimum:</p>
+                <ul>
+                    <li>Requires a 64-bit processor and operating system</li>
+                    <li>OS *: Windows 7 / 8 / 8.1 / 10 / 11 (64-bit only) with the latest updates</li>
+                    <li>Processor: Intel Core i5-3330 / AMD FX-6300</li>
+                    <li>Memory: 4 GB RAM</li>
+                    <li>Graphics: NVIDIA GeForce GTX 460 / AMD Radeon HD 8770, 1280x768 screen resolution</li>
+                    <li>DirectX: Version 10</li>
+                    <li>Network: Broadband Internet connection</li>
+                    <li>Storage: 70 GB available space</li>
+                </ul>
+            </article>
+            <article>
+               <p>Recommended:</p>
+               <ul>
+                    <li>Requires a 64-bit processor and operating system</li>
+                    <li>OS: Windows 10 / 11 (64-bit only) with the latest updates</li>
+                    <li>Processor: Intel Core i3-9100F / AMD Ryzen 3 3100</li>
+                    <li>Memory: 16 GB RAM</li>
+                    <li>Graphics: Nvidia GTX 1650 / AMD Radeon RX 580</li>
+                    <li>DirectX: Version 10</li>
+                    <li>Network: Broadband Internet connection</li>
+                    <li>Storage: 70 GB available space</li>
+                </ul>
+            </article>
+        </article>
 
 
 
@@ -117,11 +322,117 @@
 
 
 
+    </section> <!-- Einde column left-->
+
+
+
+
+    <section class="column-right">
+
+        <article>
+            <ul>
+            <li>Title: World of Tanks</li>
+            <li>Genre: <a href="dummy-page.html">Action, Massively Multiplayer, Simulation, Free To Play</a></li>
+            <li>Developer: <a href="dummy-page.html">Wargaming Group Limited</a></li>
+            <li>publisher: <a href="dummy-page.html">Wargaming Group Limited</a></li>
+            <li>Release Date: 29 Apr, 2021</li>
+            </ul>
+
+            <ul>
+                <li><a href="dummy-page.html">Visit the Website</a></li>
+                <li><a href="dummy-page.html">Youtube</a></li>
+                <li><a href="dummy-page.html">Twitch</a></li>
+                <li><a href="dummy-page.html">Discord</a></li>
+                <li><a href="dummy-page.html">Facebook</a></li>
+                <li><a href="dummy-page.html">Instagram</a></li>
+                <li><a href="dummy-page.html">X</a></li>
+                <li><a href="dummy-page.html">View update history</a></li>
+                <li><a href="dummy-page.html">Read related news</a></li>
+                <li><a href="dummy-page.html">View discussions</a></li>
+                <li><a href="dummy-page.html">Find Community Groups</a></li>
+
+            </ul>
+        </article>
+
+
+        <article>
+            <h2>Is this game relevant to you?</h2>
+            <p>Similar to games you played</p>
+            <ul>
+                <li> <a href="dummy-page.html">
+                    <img src="./images/product-images/wot-page/relevancy_capsule.jpg" alt="Hearts of Iron 4">
+                    <p>135 hrs on record</p>
+                </a></li>
+                <li> <a href="dummy-page.html">
+                    <img src="./images/product-images/wot-page/relevancy_capsule-2.jpg" alt="World of Tanks Blitz">
+                    <p>78 hrs on record</p>
+                </a> </li>
+            </ul>
+            <div class="rule"></div>
+            <p>Players like you loved the game</p>
+            <div class="rule"></div>
+            <p>Currently popular</p>
+        </article>
 
 
 
 
 
+    </section> <!-- Einde rechter kollum-->
+
+
+
+
+
+
+
+    <section>
+        <article>
+            <div>
+                <img src="./images/product-images/wot-page/wargaming-profile.jpg" alt="Profiel van Wargaming Group LTD">
+                <h2>More from Wargaming Group LTD</h2>
+            </div>
+            <Button>Follow</Button>
+            <a href="dummy-page.html">See all</a>
+            <ul>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-wow.jpg" alt="World of Warships">               </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-wot_blitz.jpg" alt="World of Tanks - Blitz">    </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-total_anihalation.jpg" alt="Total Anihalation"> </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-orion.jpg" alt="Orion">                         </a>    </li>
+
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-wow.jpg" alt="World of Warships">               </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-wot_blitz.jpg" alt="World of Tanks - Blitz">    </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-total_anihalation.jpg" alt="Total Anihalation"> </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-orion.jpg" alt="Orion">                         </a>    </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>More like this</h2>
+            <a href="dummy-page.html">See all</a>
+            <ul>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-wow.jpg" alt="World of Warships">               </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-wot_blitz.jpg" alt="World of Tanks - Blitz">    </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-total_anihalation.jpg" alt="Total Anihalation"> </a>    </li>
+                <li>    <a href="dummy-page.html">  <img src="./images/product-images/wot-page/more-orion.jpg" alt="Orion">                         </a>    </li>
+            </ul>
+        </article>
+    </section>
+
+
+
+    <section>
+        <h2>Customer reviews for World of Tanks</h2>
+        <a href="dummy-page.html">About user reviews</a>
+        <a href="dummy-page.html">Your preferences</a>
+        <div class="rule"></div>
+        <article>
+            <img src="./images/language_outlier_icon.svg" alt="Language">
+            <p>Total reviews in all languages: 91,759 (Very Positive)</p>
+            <p>Reviews in English: 22,790 (Mostly Positive)</p>
+            <a href="dummy-page.html">See langauge breakdown</a>
+        </article>
+    </section>
 
 
 
@@ -178,6 +489,8 @@
 			</ul>
 		</div>
 	</footer>
+
+    <script defer src="scripts/hamburger_menu.js"></script>
 
 </body>
 </html>

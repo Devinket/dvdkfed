@@ -170,6 +170,8 @@ Ik heb nu 3 css bestanden. op moment van schrijven heb ik precies 800 regels css
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Ik heb mijn HTML verbeterd naar aanleiding van de test. De test verliep goed, alleen miste ik op sommige plekken, zoals afbeeldingen, nog een alt. Ook heb ik sommige alts aangepast.
+
 </details>
 
 
@@ -221,13 +223,25 @@ Ik heb nu 3 css bestanden. op moment van schrijven heb ik precies 800 regels css
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
+  Ik heb geleerd wanneer je flexbox en grid gebruikt. Flexbox gebruik je sneller bij kleine handelingen en grid sneller bij grote.
+  Ik heb meer geleerd over css, hoe je bijvoorbeeld nth:type moet gebruiken en hoe je precies de element sellecteerd die ik zoek.
+  Met alle ervaring die ik heb van het maken van mijn homepagina, ging het maken van de productpagina makkelijker en veel sneller.
+
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+De opdrachten op DLO uitvoeren vind ik lastig. Als je voor het eerst geintroduseerd wordt aan een onderwerp zoals grid box is het niet fijn om meteen te moeten coderen, zonder dat je weet welke regels je moet gebruiken. Vooral uitzoeken welke regels er van toepassing zijn, was lastig. De carousel opdracht was daardoor ook niet gelukt.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+Ook vind ik javascript nogsteeds lastig. Ik heb daar veel hulp bij moeten krijgen. Als ik nu terug kijk op mijn javascript, vind ik het ook lastig om het aan te passen, zodat het wat anders zou kunnen doen.
+
+het was niet gelukt om alles wat te breed is voor het scherm, scrollbaar te maken.
+
+  <img src="readme-images/grid.png" width="375px" alt="bummer">
+
+Ook was het niet gelukt om de buttons op dezelfde manier responsive te maken als op de steam website
+
+  <img src="readme-images/buttons.png" width="375px" alt="bummer">
 </details>
 
 
@@ -243,8 +257,19 @@ Ik heb nu 3 css bestanden. op moment van schrijven heb ik precies 800 regels css
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. CSS Remedy: https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+  2. Learn CSS the easy way: https://youtu.be/eHaZlFcGl6k?si=yZSN-ElLAmLZVsJ0
+  3. Zelfgemaakte code uit de Flexbox oefening: https://codepen.io/Devinket/pen/emJpJZr
+  4. Zelfgemaakte code uit hamburger menu oefening: https://codepen.io/Devinket/pen/MYKKjmO
+  5. Steam: https://store.steampowered.com/ (voor diverse waarden en afbeeldingen)
+  6. ChatGPT: ChatGPT heb ik enkele keren benaderd wanneer ik er niet meer uit kwam. Op zo'n moment legde ik de situatie uit aan ChatGPT. Dan kwam daar een code uit (vaak met classes). Ik ben door de code heen gaan kijken welke regels er anders dan mijn code was, en welke regels code ik kan gebruiken voor mijn code. Hieronder geef ik aan welke prompts ik heb gebruikt:
+  - Javascript Featured and recommended: https://chatgpt.com/share/68da487a-5c4c-8005-9ab8-0f1ac99864c7
+
+Vragen die ik gesteld heb:
+  - Main centreren: https://chatgpt.com/share/68da4989-058c-8005-9086-1fe2ab20c9c7
+  - Items centreren in flexbox: https://chatgpt.com/share/68da48da-3cec-8005-9569-388157b74943
+  - Alle childs sellecteren: https://chatgpt.com/share/68da49a9-32e4-8005-90c0-62ec773b737f
+  - Childs uitsluiten: https://chatgpt.com/share/68da49bc-61c0-8005-9c89-5105768019de
+
 
 </details>

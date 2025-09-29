@@ -32,18 +32,21 @@
         </nav>
         
         <!-- nav voor klein scherm-->
-         <nav class="mobiel-nav">
-            <ul>
-                <li><img src="./images/header_menu_hamburger.png" alt="Hamburger menu die verwijst naar verschillende belangrijke pagina's"></li>
-                <li>
-                    <img src="./images/header_logo.png">
-                </li>
-                <li>
-                    <h1 alt="Steam homepagina">Steam</h1>
-                </li>
-            </ul>
-        
-        </nav>
+        <nav class="mobiel-nav">
+			<ul>
+				<li><button><img src="./images/header_menu_hamburger.png" alt="Hamburger menu that leads to a navigation menu"></button></li>
+				<li> <a href="index.html">
+					<img src="./images/header_logo.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="index.html">
+					<h1>Steam</h1>
+					</a>
+				</li>
+			</ul>
+		
+		</nav>
         
         <a class="wishlist-button" href="dummy-page.html" alt="Ga naar jouw wishlist">wishlist</a>
         
@@ -70,7 +73,39 @@
                 </li>
             </ul>
         </nav>
-        
+
+        		<!-- hamburger menu -->
+		 <nav>
+			<section>
+				<a href="dummy-page.html">
+					<img src="./images/user-profile.jpg" alt="User profile picture">
+					<p>Devinket</p>
+					<p>Wallet (0,00€)</p>
+				</a>
+
+				<ul>
+					<li><a href="dummy-page.html"> Notifications <img src="./images/icon-notification_brief.png" alt=""> </a></li>
+					<li><a href="dummy-page.html"> Store </a></li>
+					<li><a href="dummy-page.html"> Community </a></li>
+					<li><a href="dummy-page.html"> You & Friends </a></li>
+					<li><a href="dummy-page.html"> Chat </a></li>
+					<li><a href="dummy-page.html"> Support </a></li>
+				</ul>
+				<ul>
+					<li><a href="dummy-page.html"> Account details </a></li>
+					<li><a href="dummy-page.html"> Store preferences </a></li>
+					<li><a href="dummy-page.html"> Change Language </a></li>
+					<li><a href="dummy-page.html"> Change user </a></li>
+					<li><a href="dummy-page.html"> Get the Steam Mobile App </a></li>
+					<li><a href="dummy-page.html"> View desktop website </a></li>
+				</ul>
+				<img src="./images/logo_valve_footer.png" alt="Footer">
+				<p>© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+			</section>
+
+			<button></button>
+		 </nav>
+    </header>
         
 
     <main>
@@ -116,5 +151,7 @@
 			</ul>
 		</div>
 	</footer>
+
+    <script defer src="scripts/hamburger_menu.js"></script>
 </body>
 </html>
